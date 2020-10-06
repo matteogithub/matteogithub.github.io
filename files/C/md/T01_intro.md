@@ -8,10 +8,6 @@
 Corso di Laurea in Ingegneria Elettrica, Elettronica e Informatica
 
 ---
-
-E' vietata la copia, la rielaborazione, la riproduzione in qualsiasi forma dei contenuti e immagini presenti nelle lezioni. E' inoltre vietata la diffusione, la redistribuzione e la pubblicazione dei contenuti e immagini, incluse le registrazioni delle videolezioni con qualsiasi modalità e mezzo non autorizzate espressamente dall'autore o da Unica
-
----
 # Il Docente
 
 **Matteo Fraschini** - DIEE
