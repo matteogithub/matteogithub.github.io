@@ -1,4 +1,4 @@
-<!-- footer: M Fraschini 2019-2020 -->
+<!-- footer: M Fraschini 2020-2021 -->
 
 <!-- page_number: true -->
 
@@ -34,7 +34,7 @@ Ricevimento: martedì ore 15 (email)
 
 - partecipare alle lezioni sarà per voi una priorità
 - il massimo rispetto verso i vostri colleghi e verso i docenti ospiti
-- partecipazione attiva durante le attiivtà del corso
+- partecipazione attiva durante le attività del corso
 
 
 ---
