@@ -1,4 +1,4 @@
-<!-- footer: M Fraschini 2020-2021 -->
+<!-- footer: M. Fraschini - Università degli Studi di Cagliari - AA 2020-2021 -->
 
 <!-- page_number: true -->
 
@@ -6,6 +6,10 @@
 # Elementi di Informatica
 
 Corso di Laurea in Ingegneria Elettrica, Elettronica e Informatica
+
+---
+
+E' vietata la copia, la rielaborazione, la riproduzione in qualsiasi forma dei contenuti e immagini presenti nelle lezioni. E' inoltre vietata la diffusione, la redistribuzione e la pubblicazione dei contenuti e immagini, incluse le registrazioni delle videolezioni con qualsiasi modalità e mezzo non autorizzate espressamente dall'autore o da Unica
 
 ---
 # Il Docente
@@ -41,7 +45,10 @@ Ricevimento: martedì ore 15 (email)
 
 # Orario delle lezioni
 
-# ![](/Users/matteo/Downloads/images/orario.png)
+- Giovedì ore 11
+- Venerdì ore 11
+
+Eventuali aggiornamenti su: https://facolta.unica.it/ingegneriarchitettura/files/2020/10/IEEI.pdf
 
 
 ---
@@ -56,31 +63,11 @@ Corso integrato di **Sistemi di Elaborazione delle Informazioni**
 Il voto finale corrisponderà  alla media dei voti dei due moduli
 
 ---
-Guida online - Esse3: scheda insegnamento
-
-# ![](/Users/matteo/Downloads/images/corso.png)
-
----
-
-# Materiale Didattico
-
-Sito docente: https://matteogithub.github.io/
-
-# ![](/Users/matteo/Downloads/images/github_main.png)
-
----
 
 # Materiale Didattico
 
 Sito docente: https://matteogithub.github.io/teaching/
 
-# ![](/Users/matteo/Downloads/images/github_teaching.png)
-
----
-
-# Materiale Didattico
-
-# ![](/Users/matteo/Downloads/images/PDF.png)
 
 ---
 
@@ -93,22 +80,18 @@ C = Programmazione C
 
 
 ---
-elearning.unica.it
+# Moodle: elearning.unica.it
 
-# ![](/Users/matteo/Downloads/images/elearning.png)
----
+https://elearning.unica.it/course/view.php?id=65
 
-elearning.unica.it
-
-# ![](/Users/matteo/Downloads/images/elearning2.png)
 ---
 
 # Cosa trovo sul portale elearning.unica.it?
 - Avvisi importanti
 - FAQ
-- Forum news
 - Link al materiale didattico
-- Esiti compiti
+- Testo e modulo di consegna per lo scritto fiduciario
+- Esiti esami
 - Selezione di compiti: testi e soluzioni
 
 `NOTA BENE`: Le "soluzioni" proposte in questa sezione vengono fornite con l'esclusiva motivazione di facilitare la preparazione del compito, possono non essere complete e non devono essere considerate definitive o uniche procedure possibili che portino alla soluzione del problema descritto.
@@ -157,7 +140,6 @@ Conoscenze di base di matematica e algebra. Dimestichezza con l'uso del calcolat
 - Concetto di algoritmo.
 - Nozioni di base sull'organizzazione di un calcolatore. 
 - Nozioni di base sull'organizzazione di un Sistema Operativo.
-- Reti di calcolatori.
 - Introduzione alla sicurezza informatica.
 
 
@@ -192,7 +174,7 @@ Conoscenze di base di matematica e algebra. Dimestichezza con l'uso del calcolat
 
 ---
 
-# Verifica dell'apprendimento
+# Verifica dell'apprendimento - Modalità standard
 
 - L'esame è articolato in una prova comprendente sia la parte di `teoria` che la parte di `programmazione con linguaggio C`. 
 - La prova è effettuata in forma **scritta** (della durata di 2 ore), tramite domande a risposta aperta, a risposta multipla, risoluzione di esercizi di conversione tra formati binario, ottale, esadecimale, decimale. La parte di programmazione consiste nella scrittura di codice C. 
@@ -201,9 +183,17 @@ Conoscenze di base di matematica e algebra. Dimestichezza con l'uso del calcolat
 
 ---
 
-# Prove intermedie
+# Verifica dell'apprendimento - Emergenza sanitaria
+
+- Prova scritta fiduciaria: comprendente sia la parte di `teoria` che la parte di `programmazione con linguaggio C`. 
+- **La prova scritta fiduciaria è obbligatoria**. U
+- Prova orale: (1) confirmatorio; (2) verifica; (3) sostitutivo.
+
+---
+
+# Prove intermedie - IN SOSPESO
 Prove aperte a tutti gli studenti
-`Prima prova`: settimana del 4 novembre
+`Prima prova`: novembre
 `Seconda prova`: primi di gennaio
 
 Per poter sostenere la seconda prova occorre aver superato la prima prova (almeno 16/30)
@@ -248,15 +238,7 @@ www.menti.com
 - Brain signal processing
 - Connectivity and Network analysis in M/EEG
 
----
-
-# ![](/Users/matteo/Downloads/images/brain.png)
-
----
-
-# ![](/Users/matteo/Downloads/images/papers.png)
-
-`Laboratorio di Neuroimaging` 2 CFU - Giugno/Luglio
+`Laboratorio di Neuroimaging` 2 CFU - Gennaio/Febbraio 2021
 
 ---
 
@@ -282,12 +264,12 @@ http://people.unica.it/matteofraschini/news/
 
 ---
 
-# ![](/Users/matteo/Downloads/images/wef.png)
+# ![](/Users/matteofraschini/Documents/GitHub/matteogithub.github.io/files/images/wef.png)
 
 ---
 
-# ![](/Users/matteo/Downloads/images/brands.png)
+# ![](/Users/matteofraschini/Documents/GitHub/matteogithub.github.io/files/images/brands.png)
 
 ---
 
-# ![](/Users/matteo/Downloads/images/toplang.png)
+# ![](/Users/matteofraschini/Documents/GitHub/matteogithub.github.io/files/images/toplang.png)
