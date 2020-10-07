@@ -16,6 +16,8 @@ Padiglione M - fronte ingresso Biblioteca - 3° Piano
 Contatti:
 - moduloelementi@gmail.com / fraschin@unica.it
 - 070 675 5894
+*Twitter: @moduloelementi*
+*Gruppo Telegram: https://t.me/joinchat/HxmQ1hdqV49-XuUUO2WJfg*
 
 Ricevimento: martedì ore 15 (email)
 
