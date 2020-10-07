@@ -1,6 +1,6 @@
 <!-- $theme: default -->
 
-<!-- footer: M Fraschini 2019-2020 -->
+<!-- footer: M. Fraschini - Università degli Studi di Cagliari - AA 2020-2021 -->
 
 <!-- page_number: true -->
 
@@ -300,7 +300,7 @@ somma l'espressione a destra con l'espressione a sinistra e assegna alla variabi
 
 Calcolare diametro, circonferenza e aria di un cerchio a partire dal valore del raggio.
 
-# ![](/Users/matteo/Downloads/images/cerchio.png)
+# ![](/Users/matteofraschini/Documents/GitHub/matteogithub.github.io/files/images/cerchio.png)
 
 ---
 
