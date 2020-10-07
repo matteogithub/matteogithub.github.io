@@ -33,7 +33,7 @@ Ricevimento: martedì ore 15 (email)
 # Cosa mi aspetto da voi...
 
 - partecipare alle lezioni sarà per voi una priorità
-- il massimo rispetto verso i vostri colleghi e verso i docenti ospiti
+- il massimo rispetto verso i vostri colleghi e verso i docenti
 - partecipazione attiva durante le attività del corso
 
 
@@ -182,7 +182,7 @@ Conoscenze di base di matematica e algebra. Dimestichezza con l'uso del calcolat
 # Verifica dell'apprendimento - Emergenza sanitaria
 
 - Prova scritta fiduciaria: comprendente sia la parte di `teoria` che la parte di `programmazione con linguaggio C`. 
-- **La prova scritta fiduciaria è obbligatoria**. U
+- **La prova scritta fiduciaria è obbligatoria**.
 - Prova orale: (1) confirmatorio; (2) verifica; (3) sostitutivo.
 
 ---
