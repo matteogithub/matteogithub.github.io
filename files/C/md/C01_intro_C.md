@@ -10,28 +10,6 @@ Elementi di Informatica
 
 ---
 
-# Perché dovrei imparare a programmare?
-
-- La tecnologia è ovunque
-- Migliora le competenze di logica e di problem-solving
-- E' gratificante
-- Mette nelle condizioni di fare qualcosa di nuovo
-- Può cambiare la vostra vita
-
----
-
-# ![](/Users/matteo/Downloads/images/wef.png)
-
----
-
-# ![](/Users/matteo/Downloads/images/brands.png)
-
----
-
-# ![](/Users/matteo/Downloads/images/toplang.png)
-
----
-
 # Un po' di storia...
 
 Nel **1972** Dennis Ritchie sviluppa la prima versione del linguaggio C
@@ -76,18 +54,18 @@ Windows (multipiattaforma)
 
 ---
 
-# ![](/Users/matteo/Downloads/images/clion.png)
+# ![](/Users/matteofraschini/Documents/GitHub/matteogithub.github.io/files/images/clion.png)
 
 
 ---
 
-# ![](/Users/matteo/Downloads/images/clion_guide.png)
+# ![](/Users/matteofraschini/Documents/GitHub/matteogithub.github.io/files/images/clion_guide.png)
 
 ---
 
 # Per smartphone e tablet
 
-# ![](/Users/matteo/Downloads/images/emu.png)
+# ![](/Users/matteofraschini/Documents/GitHub/matteogithub.github.io/files/images/emu.png)
 
 ---
 
