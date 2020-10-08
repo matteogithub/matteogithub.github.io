@@ -13,6 +13,7 @@ Elementi di Informatica
 
 # Dichiarazione di variabili
 
+- E' il nome di un'area di memoria che il nostro programma potrà utilizzare.
 - Dichiarazione delle variabili che saranno utilizzate nel programma.
 - Assegnazione di un **nome** (identificatore) e attribuzione del **tipo**.
 - Il tipo definisce le caratteristiche che regolano l'uso di una variabile.
@@ -35,7 +36,7 @@ int j=0;
 
 ```
 
-NB: il C Ã¨ *case sensitive*!
+NB: il C è *case sensitive*!
 NB: scelta del nome delle variabili
 
 ---
