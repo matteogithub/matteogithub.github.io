@@ -1,8 +1,10 @@
+<!-- footer: M. Fraschini - Università degli Studi di Cagliari - AA 2020-2021 -->
+
+<!-- page_number: true -->
 
 # C: iterazione
 
 Elementi di Informatica
-*Twitter: @moduloelementi*
 
 ---
 
