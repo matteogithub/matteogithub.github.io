@@ -1,4 +1,4 @@
-<!-- footer: M Fraschini 2019-2020 -->
+<!-- footer: M. Fraschini - Università degli Studi di Cagliari - AA 2020-2021 -->
 
 <!-- page_number: true -->
 
@@ -6,7 +6,6 @@
 # C: Array
 
 Elementi di Informatica
-*Twitter: @moduloelementi*
 
 ---
 
