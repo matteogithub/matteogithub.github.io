@@ -37,11 +37,13 @@ int vett[10];
 ```
 
 - Con la dichiarazione riserviamo lo spazio di memoria sufficiente per il nostro array
-- Evitiamo di dover dichiarare 10 variabili
+- In questo esempio, evitiamo di dover dichiarare 10 diverse variabili
 
 ---
 
 # Array
+
+### Accedere agli elementi di un array:
 
 - Tutti gli elementi di un array hanno lo stesso nome: `nome_array`
 
@@ -57,7 +59,7 @@ Esempio:
 # Array
 
 - Il primo elemento di un array ha indice `0` :exclamation:
-- L'ultimo elemento di un array ha indice `N-1`, dove `N` indica la dimensione
+- L'ultimo elemento di un array ha indice `N-1`, dove `N` indica la dimensione dell'array
 
 
 `[0] [1] [2] ... [N-1] `
@@ -105,7 +107,7 @@ for(i=0; i<n; ++i)
 
 ### Considerazione importante!
 
-con `int voti[10];` stiamo dicendo che siamo a conoscenza del fatto che la lunghezza dell'array sarà 10!
+con `int voti[10];` stiamo dicendo che la lunghezza dell'array sarà 10!
 
 - Se volessimo inserire 20 elementi?
 	- Modifica noiosa e rischiosa!
