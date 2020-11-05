@@ -89,11 +89,11 @@ Permettono di sviluppare programmi concisi ed efficienti
 - Esempio:
 
 ```C
-int voti[NVOTI],somma=0,i,n;
+int voti[10],somma=0,i;
 
 ...
 
-for(i=0; i<n; ++i)
+for(i=0; i<10; ++i)
 {
 	printf("Inserisci voto: ");
     	scanf("%d",&voti[i]);
