@@ -15,8 +15,6 @@ Elementi di Informatica
 
 # Strutture
 
-**Tipo derivato**: deve far riferimento ad un tipo *base*
-
 - Quando si usa una struttura :question: 
 
 	- Quando abbiamo necessità  di trattare un **insieme NON omogeneo** di dati :exclamation:
