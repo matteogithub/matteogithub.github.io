@@ -11,6 +11,8 @@ Elementi di Informatica
 
 # Array
 
+E' un tipo di struttura dati che può memorizzare una raccolta sequenziale di elementi dello stesso tipo
+
 **Tipo derivato**: deve far riferimento ad un tipo *base*
 
 - Quando si usa un array :question: 
