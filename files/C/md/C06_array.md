@@ -450,7 +450,7 @@ Scrivere un programma che esagua la ricerca di un elemento (letto da tastiera) i
 
 ---
 
-# Soluzione
+# Soluzione - ricerca sequenziale
 
 ```C
 #include <stdio.h>
@@ -458,12 +458,12 @@ Scrivere un programma che esagua la ricerca di un elemento (letto da tastiera) i
 int main() {
     int v[DIM], n, i, elem, trovato=0;
     do {
-        printf("Inserisci dimensione array: \n");
+        printf("\nInserisci dimensione array: ");
         scanf("%d", &n);
-        } while(n<1 || n>DIM);
-    printf("Inserisci i %d elementi:\n",n);
+    } while(n<1 || n>DIM);
+    printf("\nInserisci i %d elementi: ",n);
     for(i=0;i<n;i++) {
-        printf("elemento di indice - %d : ",i);
+        printf("\nelemento di indice - %d: ",i);
         scanf("%d",&v[i]);
     }
     printf("\nInserisci elemento da ricercare: ");
@@ -473,8 +473,8 @@ int main() {
         if(elem==v[i]) trovato=1;
         ++i;
     }
-    if(trovato==1) printf("Elemento in pos %d\n",i);
-    else printf("Elemento non presente\n");
+    if(trovato==1) printf("\nElemento in pos %d",i);
+    else printf("\nElemento non presente");
 }
 ```
 
