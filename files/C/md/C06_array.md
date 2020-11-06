@@ -485,7 +485,7 @@ Scrivere un programma che ordini un array (in ordine crescente)
 
 ---
 
-# Soluzione
+# Soluzione - bubble sort
 
 ```C
 #include <stdio.h>
