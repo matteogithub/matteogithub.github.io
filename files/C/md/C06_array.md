@@ -446,7 +446,7 @@ int main()
 ---
 
 # Esercizio
-Scrivere un programma che esagua la ricerca di un elemento (letto da tastiera) in un array
+Scrivere un programma che esegua la ricerca di un elemento (letto da tastiera) in un array
 
 ---
 
