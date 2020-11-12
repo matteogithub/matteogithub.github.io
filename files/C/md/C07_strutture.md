@@ -62,7 +62,7 @@ struct data
 };
 ```
 
-Questa rappresenta la **DEFINIZIONE** di una strutture.
+Questa rappresenta la **DEFINIZIONE** di una struttura.
 
 La definizione permette di creare un **NUOVO TIPO**
 
