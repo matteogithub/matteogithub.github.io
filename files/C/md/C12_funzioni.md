@@ -615,8 +615,6 @@ void scambia(int x, int y) {
 }
 ```
 
-`Prima x vale 0 e y vale 1` e `Dopo x vale 0 e y vale 1`
-
 ---
 
 # Esempio: scambia con i puntatori
