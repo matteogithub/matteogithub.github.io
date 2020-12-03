@@ -11,7 +11,7 @@ Elementi di Informatica
 
 # Oggetti dinamici
 
-I puntatori possono essere usati per la creazione e la gestione di oggetti dinamici
+I *puntatori* possono essere usati per la creazione e la gestione di oggetti dinamici
 
 Gli oggetti dinamici sono creati durante l’esecuzione del programma. Non è quindi necessaria una dichiarazione esplicita: *non serve il nome e non serve conoscerne il numero* a priori.
 
