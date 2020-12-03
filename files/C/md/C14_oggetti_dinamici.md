@@ -216,7 +216,7 @@ int main () {
 
 ---
 
-# Array dinamico: con funzioni
+# Array dinamico: con funzioni (soluzione 1)
 
 ```C
 #include <stdio.h>
@@ -241,6 +241,30 @@ void allocate_array(int size, int **p) {
     //*(*p+4)=200;
     for(i=0;i<size;i++)
         scanf("%d",*p+i);
+}
+```
+
+---
+# Array dinamico: con funzioni (soluzione 2)
+
+```C
+#include <stdio.h>
+#include <stdlib.h>
+int * allocate_array(int size);
+int main () {
+    int i,n, *ptr;
+    printf("\nInserisce dimensione array: ");
+    scanf("%d",&n);
+    ptr=allocate_array(n);
+    for(i=0;i<n;i++) printf("%d ",*(ptr+i));
+    free(ptr);
+}
+int * allocate_array(int size) {
+    int i,*p;
+    p=(int*) calloc(size, sizeof(int));
+    for(i=0;i<size;i++)
+        scanf("%d",p+i);
+    return p;
 }
 ```
 
