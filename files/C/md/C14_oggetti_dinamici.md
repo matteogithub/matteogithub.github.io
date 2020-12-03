@@ -269,6 +269,29 @@ int * allocate_array(int size) {
 ```
 
 ---
+# Array dinamico: esempio di realloc()
+
+```C
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int *p,*q, n=5, m,i;
+
+    p=(int *) malloc(n * sizeof(int));
+    for(i=0;i<n;i++) scanf("%d",p+i);
+    printf("\n");
+    for(i=0;i<n;i++) printf("%d ",*(p+i));
+    m=10;
+    q=realloc(p,m * sizeof(int));
+    for(i=n;i<m;i++) scanf("%d",q+i);
+    for(i=0;i<m;i++) printf("%d ",*(q+i));
+
+    return 0;
+}
+```
+
+---
 
 # Primo esempio, crea lista
 
