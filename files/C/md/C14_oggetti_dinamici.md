@@ -265,12 +265,14 @@ struct lista {
 
 struct lista *crealista();
 void visualizza_lista(struct lista *);
+void libera_lista(struct lista *);
 
 int main() {
     struct lista *punt_lista;
 
     punt_lista=crealista();
     if(punt_lista!=NULL) visualizza_lista(punt_lista);
+    if(punt_lista!=NULL) libera_lista(punt_lista);
 }
 ```
 
@@ -309,6 +311,20 @@ void visualizza_lista(struct lista *p) {
     p=p->next;
   }
 }  
+```
+
+---
+
+```C
+void libera_lista(struct lista *p) {
+    struct lista *paux;
+
+    while(p!=NULL) {
+        paux=p;
+        p=p->next;
+        free(paux);
+    }
+}
 ```
 
 ---
