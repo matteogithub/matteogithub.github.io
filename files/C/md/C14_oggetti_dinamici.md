@@ -622,3 +622,10 @@ struct lista *elimina(struct lista *p) {
     return p;
 }
 ```
+---
+
+# Esempio compito
+Scrivere un programma in C che permetta di inserire (da tastiera) in due diversi array n numeri interi (gli array avranno la stessa lunghezza, n). Il programma dovrà visualizzare a video i due array.
+Successivamente dovrà creare una lista contenente indice e valore (indice, valore) di tutti gli elementi dell’array1 uguali ai corrispondenti (stesso indice) valori degli elementi dell’array2 evitando di inserire nella lista duplicati. Stampare a video la lista.
+
+---
