@@ -160,10 +160,10 @@ int main() {
   else {
     while(feof(fileptr)==0) {
       s=fgets(vettore,DIM,fileptr);
-    }
-  }
+    }      
   printf("%s",vettore);
   fclose(fileptr);
+  }
 }
 ```
 
