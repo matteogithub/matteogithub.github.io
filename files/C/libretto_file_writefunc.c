@@ -24,7 +24,7 @@ int main() {
     struct insegnamento *ptr_corso;
 
     ptr_corso=&corso;
-    
+
     while(opzione!=0)
     {
         printf("\n\nBENVENUTO NEL PROGRAMMA DI GESTIONE DEI TUOI ESAMI\n");
