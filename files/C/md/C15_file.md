@@ -1,3 +1,7 @@
+---
+marp: true
+---
+
 <!-- footer: M. Fraschini - Università degli Studi di Cagliari - AA 2020-2021 -->
 
 <!-- page_number: true -->
