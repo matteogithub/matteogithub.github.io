@@ -360,7 +360,7 @@ void scrivi_file(int *v, int n, float media) {
 
 ```C
 #include <stdio.h>
-#define DIM 20
+#define DIM 100
 
 void scrivi_file(int *, int *, int, int);
 
