@@ -503,3 +503,25 @@ Consente di posizionare il puntatore in una qualunque posizione all’interno de
 `fseek(fp, n, 2)` fp viene posizionato sul n° byte a partire dalla fine del file
 
 `n=ftell(fp)` //restituisce la posizione attuale del puntatore
+
+---
+
+```C
+#include <stdio.h>
+int main() {
+  FILE *fileptr;
+  int i;
+  fileptr=fopen("/Users/matteofraschini/Desktop/file03.txt","w");
+  for(i=0;i<=9;i++) {
+    printf("%ld ",ftell(fileptr));
+    fprintf(fileptr,"%d ",i);
+  }
+  fclose(fileptr);
+  fileptr=fopen("/Users/matteofraschini/Desktop/file03.txt","r+");
+  fseek(fileptr, 4, 0);
+  fprintf(fileptr,"%d",0);
+  fclose(fileptr);
+}
+
+```
+
