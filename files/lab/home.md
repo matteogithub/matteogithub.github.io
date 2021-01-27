@@ -12,7 +12,7 @@ Fino a 60 punti per il numero di CFU conseguiti fino al momento della presentazi
 Fino a 40 punti per il voto riportato all’esame di Elementi di Informatica. 
 
 Verranno stilate due graduatorie separate per gli studenti di Ingegneria Elettrica, Elettronica ed Informatica e di Ingegneria Biomedica.
-Il Laboratorio inizierà il 28	Gennaio 2020, le attività si svolgeranno online mediante piattaforma TEAMS con il seguente calendario:
+Il Laboratorio inizierà il 2	Febbraio 2020, le attività si svolgeranno online mediante piattaforma TEAMS con il seguente calendario:
 
 Martedì 2 febbraio ore 14:00- 17:00 (Fraschini)
 Giovedì 4 febbraio ore 14:00- 17:00 (Fraschini)
