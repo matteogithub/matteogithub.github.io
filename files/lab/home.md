@@ -5,7 +5,7 @@
 Gli studenti interessati a partecipare al Laboratorio - Applicazioni avanzate di informatica medica e machine learning tenuto da Matteo Fraschini e Luca Didaci dovranno compilare il modulo presente al seguente link:
 https://forms.office.com/Pages/ResponsePage.aspx?id=zHT6azT-V02X05f9bg7e4SjSW7PPN5tGjJl2E-vt1D1URDNBU0pDNDRQVTRCTlk0SlBVTjlGTTY3Vi4u 
 
-Le iscrizioni saranno aperte fino al 2 febbraio 2021 e la graduatoria sarà pubblicata il 25 Gennaio. Il numero massimo di studenti ammessi al laboratorio sarà pari a 20. Requisito essenziale per poter accedere alla graduatoria è quello di aver superato l’esame di Elementi di Informatica. I criteri per la definizione della graduatoria sono i seguenti. 
+Le iscrizioni saranno aperte fino al 24 Gennaio 2021 e la graduatoria sarà pubblicata il 25 Gennaio. Il numero massimo di studenti ammessi al laboratorio sarà pari a 20. Requisito essenziale per poter accedere alla graduatoria è quello di aver superato l’esame di Elementi di Informatica. I criteri per la definizione della graduatoria sono i seguenti. 
 
 Ad ogni studente verranno assegnati un massimo di 100 punti:
 Fino a 60 punti per il numero di CFU conseguiti fino al momento della presentazione della domanda.
