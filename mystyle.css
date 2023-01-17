@@ -1,0 +1,63 @@
+body {
+    background-color: whitesmoke;
+  }
+  * {
+    font-family: "Arial", "Helvetica", "sans-serif";
+  }
+  
+  h1 {
+    color: SteelBlue;
+  }
+  
+  h2 {
+    color: DarkCyan;
+  }
+
+  h3 {
+    color: black;
+  }
+  
+  h4 {
+    color: SteelBlue;
+  }
+  
+  p {
+    margin-left: 20px;
+    color: SteelBlue;
+  }
+
+  a {
+    color: SteelBlue;
+  }
+
+  #rcorners1 {
+    border-radius: 25px;
+    background: SteelBlue;
+    padding: 20px; 
+    width: 300px;
+    height: 45px;  
+  }
+
+  #rcorners2 {
+    border-radius: 25px;
+    background: DarkCyan;
+    padding: 20px; 
+    width: 300px;
+    height: 45px;  
+  }
+
+  #rcorners3 {
+    border-radius: 25px;
+    border: 2px solid SteelBlue;
+    padding: 20px;
+    width: 300px;
+    height: 20px;
+  }
+
+  #rcorners4 {
+    border-radius: 25px;
+    border: 2px solid DarkCyan;
+    padding: 20px;
+    width: 300px;
+    height: 20px;
+  }
