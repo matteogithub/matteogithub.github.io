@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Post di prova"
+title: "C: primi passi"
 categories: misc
 ---
 
