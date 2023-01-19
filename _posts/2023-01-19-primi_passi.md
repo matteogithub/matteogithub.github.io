@@ -6,7 +6,7 @@ categories: misc
 
 ### Introduzione
 
-In questo post provo a riassumere **alcuni** dei più importanti concetti che discuto durante le lezioni del corso di *Fondamenti di Programmazione*. Mi sembra corretto sottolineare che questo breve documento non ha le pretese di essere esaustivo o di sostituire le lezioni e/o la lettura di un buon libro. Per imparare un linguaggio di programmazione - che alla fine, nonostante le iniziali difficoltà, risulterà particolarmente gratificante - non è importante solo conoscere la sintassi ma la creatività e la determinazione, tra le altre cose, risulteranno fattori non secondari.
+Questo è il primo post di una serie dove provo a riassumere **alcuni** dei più importanti concetti che discuto durante le lezioni del corso di *Fondamenti di Programmazione*. Mi sembra corretto sottolineare che questi brevi documenti non hanno la pretesa di essere esaustivi o di sostituire le lezioni e/o la lettura di un buon libro. Per imparare un linguaggio di programmazione - che alla fine, nonostante le iniziali difficoltà, risulterà particolarmente gratificante - non è importante solo conoscere la sintassi ma la creatività e la determinazione, tra le altre cose, risulteranno fattori non secondari.
 
 ### Livello 0: iniziamo
 
