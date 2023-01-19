@@ -7,3 +7,6 @@
 #
 layout: home
 ---
+
+**Fondamenti di Programmazione (FDP)**
+**Basi di informatica, gestione dati e statistica (BIGDS)**
