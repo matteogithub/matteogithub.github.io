@@ -1,4 +1,4 @@
-title: Matteo Fraschini
+title: Matteo Fraschini Blog
 author:
   name: Matteo Fraschini
   email: matteo.fraschini@unica.it
@@ -6,7 +6,7 @@ author:
 # The `>` after `description:` means to ignore line-breaks until next key.
 # If you want to omit the line-break after the end of text, use `>-` instead.
 description: >
-  Sito web personale di Matteo Fraschini.
+  Blog personale di Matteo Fraschini.
 
 # Build settings
 
