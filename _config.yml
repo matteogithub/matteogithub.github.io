@@ -31,7 +31,7 @@ minima:
      - { platform: twitter,       user_url: "https://twitter.com/matteo_brainnet" }
   #   - { platform: flickr,         user_url: "https://www.flickr.com/photos/jekyll" }
      - { platform: github,         user_url: "https://github.com/matteogithub" }
-     - { platform: google_scholar, user_url: "https://scholar.google.it/citations?user=R5gm9Z8AAAAJ&hl=it" }
+  #   - { platform: google_scholar, user_url: "https://scholar.google.it/citations?user=R5gm9Z8AAAAJ&hl=it" }
   #   - { platform: instagram,      user_url: "https://www.instagram.com/jekyll" }
   #   - { platform: keybase,        user_url: "https://keybase.io/jekyll" }
      - { platform: linkedin,       user_url: "https://www.linkedin.com/in/matteo-fraschini-72848054/" }
