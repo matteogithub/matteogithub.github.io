@@ -19,6 +19,9 @@ plugins:
 # Theme-specific settings
 
 minima:
+  social_links:
+  - { platform: twitter, user_url: "https://twitter.com/matteo_brainnet" }
+  
   # Minima date format.
   # Refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this.
   #
