@@ -27,8 +27,8 @@ minima:
 
   # Generate social links in footer.
   #
-  social_links:
-  #   - { platform: facebook,       user_url: "https://www.facebook.com/jekyll" }
+  # social_links:
+     - { platform: facebook,       user_url: "https://www.facebook.com/jekyll" }
   #   - { platform: flickr,         user_url: "https://www.flickr.com/photos/jekyll" }
   #   - { platform: github,         user_url: "https://github.com/matteogithub" }
   #   - { platform: google_scholar, user_url: "https://scholar.google.com/citations?user=qc6CJjYAAAAJ" }
