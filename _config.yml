@@ -20,7 +20,7 @@ plugins:
 
 minima:
   social_links:
-    twitter: matteo_brainnet
+    - { platform: facebook, user_url: "https://www.facebook.com/jekyll" }
   
   # Minima date format.
   # Refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this.
