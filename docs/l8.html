@@ -517,7 +517,7 @@ window.Quarto = {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Si raccomanda caldamente di evitare l’impiego di variabili globali come canale implicito per il trasferimento di dati tra funzioni. Tale approccio compromette la modularità del software, ostacola le procedure di debugging e aumenta esponenzialmente il rischio di comportamenti anomali del sistema.</p>
+<p>Si raccomanda caldamente di evitare l’impiego di variabili globali come canale implicito per il trasferimento di dati tra funzioni. Tale approccio compromette la modularità del software, ostacola le procedure di debugging e aumenta esponenzialmente il rischio di comportamenti anomali.</p>
 </div>
 </div>
 <p>Un concetto cardine nella gestione delle funzioni è l’<strong>ambito di visibilità</strong> (<em>scope</em>) delle variabili, definito come la porzione di codice in cui una determinata variabile è dichiarata, riconosciuta e utilizzata.</p>
@@ -623,14 +623,13 @@ window.Quarto = {
 <span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>        <span class="co">// tramite x carico i valori nell'array v dichiarato nel main</span></span>
 <span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
 <span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
-<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> stampa_array<span class="op">(</span><span class="dt">int</span> n<span class="op">,</span> <span class="dt">int</span> <span class="op">*</span>v<span class="op">){</span></span>
-<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> i<span class="op">;</span></span>
-<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>    printf<span class="op">(</span><span class="st">"</span><span class="sc">\n</span><span class="st">Array: "</span><span class="op">);</span></span>
-<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span><span class="op">(</span>i<span class="op">=</span><span class="dv">0</span><span class="op">;</span>i<span class="op">&lt;</span>n<span class="op">;</span>i<span class="op">++){</span></span>
-<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>        printf<span class="op">(</span><span class="st">"</span><span class="sc">%d</span><span class="st"> "</span><span class="op">,*(</span>v<span class="op">+</span>i<span class="op">));</span></span>
-<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
-<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="Copia negli appunti" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> stampa_array<span class="op">(</span><span class="dt">int</span> n<span class="op">,</span> <span class="dt">int</span> <span class="op">*</span>v<span class="op">){</span></span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> i<span class="op">;</span></span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>    printf<span class="op">(</span><span class="st">"</span><span class="sc">\n</span><span class="st">Array: "</span><span class="op">);</span></span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span><span class="op">(</span>i<span class="op">=</span><span class="dv">0</span><span class="op">;</span>i<span class="op">&lt;</span>n<span class="op">;</span>i<span class="op">++){</span></span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>        printf<span class="op">(</span><span class="st">"</span><span class="sc">%d</span><span class="st"> "</span><span class="op">,*(</span>v<span class="op">+</span>i<span class="op">));</span></span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="Copia negli appunti" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </section>

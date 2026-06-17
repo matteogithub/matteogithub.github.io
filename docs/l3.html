@@ -453,7 +453,7 @@ Importante
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>In C, un blocco di istruzioni è rigidamente delimitato dall’uso delle parentesi graffe <code>{}</code>. Questo dettaglio sintattico è cruciale. Se si desidera eseguire un insieme di più istruzioni condizionate, l’uso delle graffe è obbligatorio. In assenza delle parentesi <code>{}</code>, il compilatore associerà all’istruzione if (o else) esclusivamente la prima istruzione immediatamente successiva, ignorando le righe seguenti, che verranno eseguite in modo sequenziale indipendentemente dall’esito del test.</p>
+<p>In C, un blocco di istruzioni è rigidamente delimitato dall’uso delle parentesi graffe <code>{}</code>. Questo dettaglio sintattico è cruciale. Se si desidera eseguire un insieme di più istruzioni condizionate, l’uso delle graffe è obbligatorio. In assenza delle parentesi <code>{}</code>, il compilatore associerà all’istruzione <code>if</code> (o <code>else</code>) esclusivamente la prima istruzione immediatamente successiva, ignorando le righe seguenti, che verranno eseguite in modo sequenziale indipendentemente dall’esito del test.</p>
 </div>
 </div>
 </section>
@@ -529,7 +529,7 @@ Importante
 </section>
 <section id="istruzione-switch" class="level3" data-number="5.1.3">
 <h3 data-number="5.1.3" class="anchored" data-anchor-id="istruzione-switch"><span class="header-section-number">5.1.3</span> Istruzione switch</h3>
-<p>Questo costrutto consente di selezionare uno specifico blocco di istruzioni in base al valore (int o char) assunto da una variabile o da un’espressione, verificata per uguaglianza rispetto a un elenco di valori costanti.</p>
+<p>Questo costrutto consente di selezionare uno specifico blocco di istruzioni in base al valore (<code>int</code> o <code>char</code>) assunto da una variabile o da un’espressione, verificata per uguaglianza rispetto a un elenco di valori costanti.</p>
 <p>Vediamo lo stesso esercizio di prima.</p>
 <div style="page-break-after: always;"></div>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -562,8 +562,8 @@ Importante
 </div>
 <p>La sintassi del costrutto richiede due precisazioni importanti:</p>
 <ul>
-<li><p><code>break</code>: ogni ramo <code>case</code> viene chiuso dall’istruzione <code>break</code>, che interrompe lo switch e trasferisce il controllo alla prima istruzione successiva al blocco. Il break non è obbligatorio, ma la sua omissione cambia radicalmente il comportamento del costrutto, una volta trovata la corrispondenza, l’esecuzione prosegue “a cascata” (fall-through) attraverso tutti i case successivi, ignorandone le etichette, fino al primo break incontrato o alla fine dello switch. Dimenticare un break è uno degli errori più classici e insidiosi del linguaggio C.</p></li>
-<li><p><code>default</code>: è possibile aggiungere un ramo opzionale <code>default</code>, che viene eseguito quando il valore dell’espressione non corrisponde ad alcuna delle costanti elencate. Svolge un ruolo analogo a quello dell’else nel costrutto if.</p></li>
+<li><p><code>break</code>: ogni ramo <code>case</code> viene chiuso dall’istruzione <code>break</code>, che interrompe lo <code>switch</code> e trasferisce il controllo alla prima istruzione successiva al blocco. Il <code>break</code> non è obbligatorio, ma la sua omissione cambia radicalmente il comportamento del costrutto, una volta trovata la corrispondenza, l’esecuzione prosegue “a cascata” (fall-through) attraverso tutti i case successivi, ignorandone le etichette, fino al primo <code>break</code> incontrato o alla fine dello <code>switch</code>. Dimenticare un <code>break</code> è uno degli errori più classici e insidiosi del linguaggio C.</p></li>
+<li><p><code>default</code>: è possibile aggiungere un ramo opzionale <code>default</code>, che viene eseguito quando il valore dell’espressione non corrisponde ad alcuna delle costanti elencate. Svolge un ruolo analogo a quello dell’<code>else</code> nel costrutto <code>if</code>.</p></li>
 </ul>
 
 

@@ -411,7 +411,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#struct-o-typedef" id="toc-struct-o-typedef" class="nav-link" data-scroll-target="#struct-o-typedef"><span class="header-section-number">8.3</span> <code>struct</code> o <code>typedef</code></a>
   <ul class="collapse">
   <li><a href="#lapproccio-standard-esplicito" id="toc-lapproccio-standard-esplicito" class="nav-link" data-scroll-target="#lapproccio-standard-esplicito"><span class="header-section-number">8.3.1</span> 1. L’approccio standard (Esplicito)</a></li>
-  <li><a href="#lapproccio-con-typedef-alias" id="toc-lapproccio-con-typedef-alias" class="nav-link" data-scroll-target="#lapproccio-con-typedef-alias"><span class="header-section-number">8.3.2</span> 2. L’approccio con <code>typedef</code> (Alias)</a></li>
+  <li><a href="#lapproccio-con-typedef-alias" id="toc-lapproccio-con-typedef-alias" class="nav-link" data-scroll-target="#lapproccio-con-typedef-alias"><span class="header-section-number">8.3.2</span> 2. L’approccio con <code>typedef</code> (alias)</a></li>
   <li><a href="#perché-preferire-struct" id="toc-perché-preferire-struct" class="nav-link" data-scroll-target="#perché-preferire-struct"><span class="header-section-number">8.3.3</span> Perché preferire <code>struct</code>?</a></li>
   </ul></li>
   </ul>
@@ -575,7 +575,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="kw">struct</span> studente mio_studente<span class="op">;</span></span></code></pre></div><button title="Copia negli appunti" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="lapproccio-con-typedef-alias" class="level3" data-number="8.3.2">
-<h3 data-number="8.3.2" class="anchored" data-anchor-id="lapproccio-con-typedef-alias"><span class="header-section-number">8.3.2</span> 2. L’approccio con <code>typedef</code> (Alias)</h3>
+<h3 data-number="8.3.2" class="anchored" data-anchor-id="lapproccio-con-typedef-alias"><span class="header-section-number">8.3.2</span> 2. L’approccio con <code>typedef</code> (alias)</h3>
 <p>Nel secondo caso, si utilizza la parola chiave <code>typedef</code> per creare un vero e proprio <em>alias</em> (un nuovo identificatore di tipo) per la struttura. Questo approccio permette di omettere la parola <code>struct</code> durante la dichiarazione delle variabili, rendendo la sintassi più compatta:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Definizione</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="kw">typedef</span> <span class="kw">struct</span> <span class="op">{</span></span>

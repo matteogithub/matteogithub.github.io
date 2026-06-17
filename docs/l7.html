@@ -597,7 +597,7 @@ window.Quarto = {
 </div>
 <p>In virtù di queste proprietà, all’interno del codice le notazioni vettoriali e le espressioni basate sui puntatori risultano del tutto equivalenti dal punto di vista computazionale:</p>
 <p><span class="math display">\[v[i] \iff *(v\_ptr + i)\]</span></p>
-<p>Infine, è possibile impiegare gli operatori di incremento e decremento (<code>v_ptr++</code>, <code>v_ptr--</code>) per spostare dinamicamente il puntatore tra gli elementi dell’array. Si raccomanda di considerare che tali operazioni modificano il valore memorizzato nella variabile puntatore stessa; al termine delle elaborazioni, <code>v_ptr</code> non farà più riferimento all’elemento iniziale dell’array, a meno di non procedere a un esplicito riallineamento (<code>v_ptr = v;</code>).</p>
+<p>Infine, è possibile impiegare gli operatori di incremento e decremento (<code>v_ptr++</code>, <code>v_ptr--</code>) per spostare dinamicamente il puntatore tra gli elementi dell’array. Si raccomanda di considerare che tali operazioni modificano il valore memorizzato nella variabile puntatore stessa e quindi al termine delle elaborazioni, <code>v_ptr</code> non farà più riferimento all’elemento iniziale dell’array, a meno di non procedere a un esplicito riallineamento (<code>v_ptr = v;</code>).</p>
 
 
 </section>
