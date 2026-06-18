@@ -402,21 +402,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Indice</h2>
    
   <ul>
-  <li><a href="#la-gestione-dei-file" id="toc-la-gestione-dei-file" class="nav-link active" data-scroll-target="#la-gestione-dei-file"><span class="header-section-number">12.1</span> La gestione dei file</a></li>
-  <li><a href="#apertura-e-chiusura" id="toc-apertura-e-chiusura" class="nav-link" data-scroll-target="#apertura-e-chiusura"><span class="header-section-number">12.2</span> Apertura e chiusura</a>
+  <li><a href="#la-gestione-dei-file" id="toc-la-gestione-dei-file" class="nav-link active" data-scroll-target="#la-gestione-dei-file"><span class="header-section-number">12.1</span> La gestione dei file</a>
   <ul class="collapse">
-  <li><a href="#lapertura-fopen" id="toc-lapertura-fopen" class="nav-link" data-scroll-target="#lapertura-fopen"><span class="header-section-number">12.2.1</span> L’apertura: <code>fopen()</code></a></li>
-  <li><a href="#la-gestione-degli-errori-e-la-chiusura-fclose" id="toc-la-gestione-degli-errori-e-la-chiusura-fclose" class="nav-link" data-scroll-target="#la-gestione-degli-errori-e-la-chiusura-fclose"><span class="header-section-number">12.2.2</span> La gestione degli errori e la chiusura: <code>fclose()</code></a></li>
-  </ul></li>
-  <li><a href="#file-di-testo" id="toc-file-di-testo" class="nav-link" data-scroll-target="#file-di-testo"><span class="header-section-number">12.3</span> File di testo</a>
-  <ul class="collapse">
-  <li><a href="#fprintf-e-fscanf" id="toc-fprintf-e-fscanf" class="nav-link" data-scroll-target="#fprintf-e-fscanf"><span class="header-section-number">12.3.1</span> <code>fprintf()</code> e <code>fscanf()</code></a></li>
-  <li><a href="#fgets-e-fputs" id="toc-fgets-e-fputs" class="nav-link" data-scroll-target="#fgets-e-fputs"><span class="header-section-number">12.3.2</span> <code>fgets()</code> e <code>fputs()</code></a></li>
-  <li><a href="#fgetc-e-fputc" id="toc-fgetc-e-fputc" class="nav-link" data-scroll-target="#fgetc-e-fputc"><span class="header-section-number">12.3.3</span> <code>fgetc()</code> e <code>fputc()</code></a></li>
-  </ul></li>
-  <li><a href="#file-binari" id="toc-file-binari" class="nav-link" data-scroll-target="#file-binari"><span class="header-section-number">12.4</span> File binari</a>
-  <ul class="collapse">
-  <li><a href="#fseek-e-ftell" id="toc-fseek-e-ftell" class="nav-link" data-scroll-target="#fseek-e-ftell"><span class="header-section-number">12.4.1</span> <code>fseek()</code> e <code>ftell()</code></a></li>
+  <li><a href="#apertura-e-chiusura" id="toc-apertura-e-chiusura" class="nav-link" data-scroll-target="#apertura-e-chiusura"><span class="header-section-number">12.1.1</span> Apertura e chiusura</a></li>
+  <li><a href="#file-di-testo" id="toc-file-di-testo" class="nav-link" data-scroll-target="#file-di-testo"><span class="header-section-number">12.1.2</span> File di testo</a></li>
+  <li><a href="#file-binari" id="toc-file-binari" class="nav-link" data-scroll-target="#file-binari"><span class="header-section-number">12.1.3</span> File binari</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -453,9 +443,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>File di testo:</strong> i dati vengono convertiti in sequenze di caratteri. Sono leggibili dall’utente tramite un normale editor di testo e risultano ideali per garantire la portabilità esterna (es. file di configurazione, file di log). L’acquisizione di questi dati richiede però un’operazione di <em>parsing</em>, ovvero la trasformazione della stringa di caratteri letta in dati strutturati (interi, float) utilizzabili dal programma.</li>
 <li><strong>File binari:</strong> contengono l’esatta rappresentazione in byte presente nella memoria del calcolatore. Non sono leggibili da un essere umano, ma non richiedono alcuna conversione o <em>parsing</em>. Sono la scelta perfetta per salvare o caricare rapidamente intere strutture dati.</li>
 </ul>
-</section>
-<section id="apertura-e-chiusura" class="level2" data-number="12.2">
-<h2 data-number="12.2" class="anchored" data-anchor-id="apertura-e-chiusura"><span class="header-section-number">12.2</span> Apertura e chiusura</h2>
+<section id="apertura-e-chiusura" class="level3" data-number="12.1.1">
+<h3 data-number="12.1.1" class="anchored" data-anchor-id="apertura-e-chiusura"><span class="header-section-number">12.1.1</span> Apertura e chiusura</h3>
 <p>Per operare sui file è necessario includere la libreria standard <code>&lt;stdio.h&gt;</code>, la quale definisce il tipo derivato <code>FILE</code>. Ogni operazione di lettura o scrittura avviene tramite un puntatore a questa struttura.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">FILE</span> <span class="op">*</span>fileptr<span class="op">;</span> <span class="co">// Dichiarazione del puntatore al file</span></span></code></pre></div><button title="Copia negli appunti" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -471,8 +460,8 @@ Nota
 <p>La struttura interna del tipo <code>FILE</code> non è strettamente standardizzata, ma dipende dall’implementazione specifica della libreria sul Sistema Operativo in uso (Windows, Linux, macOS). Il programmatore interagisce con essa solo tramite il puntatore.</p>
 </div>
 </div>
-<section id="lapertura-fopen" class="level3" data-number="12.2.1">
-<h3 data-number="12.2.1" class="anchored" data-anchor-id="lapertura-fopen"><span class="header-section-number">12.2.1</span> L’apertura: <code>fopen()</code></h3>
+<section id="lapertura-fopen" class="level4" data-number="12.1.1.1">
+<h4 data-number="12.1.1.1" class="anchored" data-anchor-id="lapertura-fopen"><span class="header-section-number">12.1.1.1</span> L’apertura: <code>fopen()</code></h4>
 <p>Prima di qualsiasi manipolazione, il file deve essere aperto tramite la funzione <code>fopen()</code>, che associa il puntatore al file fisico sul disco, specificando la modalità di accesso.</p>
 <table class="caption-top table">
 <colgroup>
@@ -530,8 +519,8 @@ Nota
 </table>
 <p><strong>Buona pratica:</strong> per i file binari, lo standard raccomanda di aggiungere il suffisso <code>b</code> alla modalità (es. <code>rb</code>, <code>wb</code>, <code>ab</code>). Sebbene su sistemi come Linux e macOS non vi sia differenza pratica, su sistemi Windows questa distinzione è indispensabile per evitare la corruzione dei dati dovuta alla traslazione automatica dei caratteri di fine riga.</p>
 </section>
-<section id="la-gestione-degli-errori-e-la-chiusura-fclose" class="level3" data-number="12.2.2">
-<h3 data-number="12.2.2" class="anchored" data-anchor-id="la-gestione-degli-errori-e-la-chiusura-fclose"><span class="header-section-number">12.2.2</span> La gestione degli errori e la chiusura: <code>fclose()</code></h3>
+<section id="la-gestione-degli-errori-e-la-chiusura-fclose" class="level4" data-number="12.1.1.2">
+<h4 data-number="12.1.1.2" class="anchored" data-anchor-id="la-gestione-degli-errori-e-la-chiusura-fclose"><span class="header-section-number">12.1.1.2</span> La gestione degli errori e la chiusura: <code>fclose()</code></h4>
 <p>È obbligatorio verificare sempre che l’apertura sia andata a buon fine controllando che il puntatore non sia <code>NULL</code>. In caso di errore, l’uso di <code>perror()</code> fornisce il dettaglio esatto dell’errore restituito dal Sistema Operativo. Infine, ogni file aperto deve essere chiuso con <code>fclose()</code>, operazione che garantisce il salvataggio fisico dei dati sul disco liberando il buffer.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>fileptr <span class="op">=</span> fopen<span class="op">(</span><span class="st">"dati.txt"</span><span class="op">,</span> <span class="st">"r"</span><span class="op">);</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="op">(</span>fileptr <span class="op">==</span> NULL<span class="op">)</span> <span class="op">{</span></span>
@@ -542,11 +531,11 @@ Nota
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>fclose<span class="op">(</span>fileptr<span class="op">);</span> <span class="co">// Chiusura fondamentale</span></span></code></pre></div><button title="Copia negli appunti" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 </section>
-<section id="file-di-testo" class="level2" data-number="12.3">
-<h2 data-number="12.3" class="anchored" data-anchor-id="file-di-testo"><span class="header-section-number">12.3</span> File di testo</h2>
+<section id="file-di-testo" class="level3" data-number="12.1.2">
+<h3 data-number="12.1.2" class="anchored" data-anchor-id="file-di-testo"><span class="header-section-number">12.1.2</span> File di testo</h3>
 <p>La libreria standard offre tre famiglie di funzioni per gestire l’I/O sui file di testo, classificate in base alla granularità del dato trattato.</p>
-<section id="fprintf-e-fscanf" class="level3" data-number="12.3.1">
-<h3 data-number="12.3.1" class="anchored" data-anchor-id="fprintf-e-fscanf"><span class="header-section-number">12.3.1</span> <code>fprintf()</code> e <code>fscanf()</code></h3>
+<section id="fprintf-e-fscanf" class="level4" data-number="12.1.2.1">
+<h4 data-number="12.1.2.1" class="anchored" data-anchor-id="fprintf-e-fscanf"><span class="header-section-number">12.1.2.1</span> <code>fprintf()</code> e <code>fscanf()</code></h4>
 <p>Agiscono in modo identico a <code>printf</code> e <code>scanf</code>, ma operano sul flusso di dati (stream) del file anziché sullo standard input/output.</p>
 <p>La funzione <code>fscanf</code> restituisce il numero di elementi letti e convertiti con successo. Questo meccanismo è cruciale per leggere un file di testo fino alla sua conclusione logica (EOF - End Of File), anche quando non si conosce a priori il numero di elementi.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Esempio: Caricamento dinamico da file a un array</span></span>
@@ -569,8 +558,8 @@ Nota
 <span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">0</span><span class="op">;</span></span>
 <span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="Copia negli appunti" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="fgets-e-fputs" class="level3" data-number="12.3.2">
-<h3 data-number="12.3.2" class="anchored" data-anchor-id="fgets-e-fputs"><span class="header-section-number">12.3.2</span> <code>fgets()</code> e <code>fputs()</code></h3>
+<section id="fgets-e-fputs" class="level4" data-number="12.1.2.2">
+<h4 data-number="12.1.2.2" class="anchored" data-anchor-id="fgets-e-fputs"><span class="header-section-number">12.1.2.2</span> <code>fgets()</code> e <code>fputs()</code></h4>
 <ul>
 <li><code>fgets(buffer, dimensione, fileptr)</code>: legge un’intera riga dal file fino al raggiungimento del carattere <code>\n</code> (incluso) o fino al limite della dimensione del buffer, aggiungendo automaticamente il terminatore di stringa <code>\0</code>.</li>
 <li><code>fputs(stringa, fileptr)</code>: scrive una stringa sul file.</li>
@@ -589,21 +578,21 @@ Nota
 </div>
 </div>
 </section>
-<section id="fgetc-e-fputc" class="level3" data-number="12.3.3">
-<h3 data-number="12.3.3" class="anchored" data-anchor-id="fgetc-e-fputc"><span class="header-section-number">12.3.3</span> <code>fgetc()</code> e <code>fputc()</code></h3>
+<section id="fgetc-e-fputc" class="level4" data-number="12.1.2.3">
+<h4 data-number="12.1.2.3" class="anchored" data-anchor-id="fgetc-e-fputc"><span class="header-section-number">12.1.2.3</span> <code>fgetc()</code> e <code>fputc()</code></h4>
 <p>Permettono di leggere e scrivere un carattere alla volta, utili per la manipolazione a bassissimo livello dei file di testo. Il ciclo di lettura tipico continua finché <code>fgetc</code> non restituisce la macro <code>EOF</code>.</p>
 </section>
 </section>
-<section id="file-binari" class="level2" data-number="12.4">
-<h2 data-number="12.4" class="anchored" data-anchor-id="file-binari"><span class="header-section-number">12.4</span> File binari</h2>
+<section id="file-binari" class="level3" data-number="12.1.3">
+<h3 data-number="12.1.3" class="anchored" data-anchor-id="file-binari"><span class="header-section-number">12.1.3</span> File binari</h3>
 <p>I file binari bypassano le problematiche di formattazione. Le funzioni <code>fread()</code> e <code>fwrite()</code> consentono di spostare direttamente blocchi di memoria (low-level reading/writing) dalla RAM al disco e viceversa.</p>
 <ul>
 <li><code>fread(destinazione, dimensione_elemento, numero_elementi, fileptr)</code></li>
 <li><code>fwrite(sorgente, dimensione_elemento, numero_elementi, fileptr)</code></li>
 </ul>
 <p>Questo approccio si rivela estremamente potente quando associato alle funzioni di riposizionamento spaziale del cursore.</p>
-<section id="fseek-e-ftell" class="level3" data-number="12.4.1">
-<h3 data-number="12.4.1" class="anchored" data-anchor-id="fseek-e-ftell"><span class="header-section-number">12.4.1</span> <code>fseek()</code> e <code>ftell()</code></h3>
+<section id="fseek-e-ftell" class="level4" data-number="12.1.3.1">
+<h4 data-number="12.1.3.1" class="anchored" data-anchor-id="fseek-e-ftell"><span class="header-section-number">12.1.3.1</span> <code>fseek()</code> e <code>ftell()</code></h4>
 <p>L’accesso ai file non deve essere necessariamente sequenziale. Il C permette l’accesso “random” (casuale o diretto) spostando il cursore interno del file.</p>
 <ul>
 <li><p><strong><code>fseek(fp, offset, origine)</code></strong>: sposta il cursore di un numero di byte pari a <code>offset</code> a partire da una specifica <code>origine</code>. Per indicare l’origine, lo standard C prescrive l’utilizzo delle seguenti macro (definite all’interno di <code>&lt;stdio.h&gt;</code>):</p></li>
@@ -627,6 +616,7 @@ Nota
 </div>
 
 
+</section>
 </section>
 </section>
 
