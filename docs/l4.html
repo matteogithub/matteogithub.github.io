@@ -461,7 +461,7 @@ Importante
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Un fattore critico nella progettazione dei costrutti iterativi consiste nell’evitare la generazione di un ciclo infinito. Questa condizione anomala si verifica quando la logica delle istruzioni interne o del terzo campo non modifica la variabile di controllo in modo coerente, rendendo l’espressione condizionale del secondo campo costantemente vera.</p>
+<p>Un fattore critico nella progettazione dei costrutti iterativi consiste nell’evitare la generazione di un <strong>ciclo infinito</strong>. Questa condizione anomala si verifica quando la logica delle istruzioni interne o del terzo campo non modifica la variabile di controllo in modo coerente, rendendo l’espressione condizionale del secondo campo costantemente vera.</p>
 </div>
 </div>
 <p>Consideriamo il seguente esempio volto a illustrare l’applicazione pratica del ciclo <code>for</code>:</p>
@@ -508,7 +508,7 @@ Importante
 </section>
 <section id="istruzione-do-while" class="level3" data-number="6.1.3">
 <h3 data-number="6.1.3" class="anchored" data-anchor-id="istruzione-do-while"><span class="header-section-number">6.1.3</span> Istruzione do-while</h3>
-<p>Sebbene sia di utilizzo meno frequente, il ciclo <code>do-while</code> costituisce una variante che non deve essere trascurata. La differenza sostanziale rispetto al ciclo <code>while</code> risiede nel momento in cui viene effettuata la verifica della condizione: nel <code>do-while</code> la condizione viene valutata dopo l’esecuzione del blocco di codice. Questo aspetto garantisce che le istruzioni racchiuse nel ciclo vengano eseguite almeno una volta, indipendentemente dal valore di verità iniziale dell’espressione di controllo. Tale costrutto trova una collocazione ideale nelle procedure di validazione dell’input, dove è necessario acquisire un dato almeno una volta prima di poterne verificare la validità.</p>
+<p>Sebbene sia di utilizzo meno frequente, il ciclo <code>do-while</code> costituisce una variante che non deve essere trascurata. La differenza sostanziale rispetto al ciclo <code>while</code> risiede nel momento in cui viene effettuata la verifica della condizione: nel <code>do-while</code> la condizione viene valutata dopo l’esecuzione del blocco di codice. Questo aspetto garantisce che le istruzioni racchiuse nel ciclo vengano eseguite almeno una volta, indipendentemente dal valore iniziale dell’espressione di controllo. Tale costrutto trova una collocazione ideale nelle procedure di validazione dell’input, dove è necessario acquisire un dato almeno una volta prima di poterne verificare la validità.</p>
 <p>Per completezza, esistono due istruzioni in grado di alterare il normale flusso di un ciclo: <code>break</code> interrompe immediatamente l’iterazione e trasferisce il controllo alla prima istruzione successiva al ciclo, mentre <code>continue</code> salta direttamente all’iterazione successiva, omettendo le istruzioni rimanenti del blocco corrente. Si tratta di strumenti da utilizzare con cautela, poiché un impiego eccessivo rende più difficile seguire la logica del programma.</p>
 <div style="page-break-after: always;"></div>
 <div class="callout callout-style-default callout-tip callout-titled">
