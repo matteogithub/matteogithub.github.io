@@ -442,7 +442,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="istruzione-if" class="level3" data-number="5.1.1">
 <h3 data-number="5.1.1" class="anchored" data-anchor-id="istruzione-if"><span class="header-section-number">5.1.1</span> Istruzione if</h3>
 <p>L’istruzione di controllo più comune è il costrutto <code>if</code>, che rappresenta la forma più elementare di ramificazione. Tale costrutto valuta un’espressione logica, se l’espressione risulta vera (true), l’istruzione (o il blocco di istruzioni) ad essa associata viene eseguita, in caso contrario (false), l’istruzione viene omessa. È inoltre possibile combinare questo meccanismo con l’istruzione <code>else</code> per definire un ramo alternativo da eseguire qualora la condizione iniziale non sia soddisfatta.</p>
-<p>È fondamentale tenere presente che nel linguaggio C la logica booleana viene valutata su base numerica (non esiste un tipo di dato booleano, almeno fino al C99). Il C99 introduce il tipo <code>_Bool</code> e l’header <code>&lt;stdbool.h&gt;</code> .Qualsiasi valore diverso da zero viene interpretato come vero (true), mentre il valore zero rappresenta il falso (false).</p>
+<p>È fondamentale tenere presente che nel linguaggio C la logica booleana viene valutata su base numerica (non esiste un tipo di dato booleano, almeno fino al C99). Il C99 introduce il tipo <code>_Bool</code> e l’header <code>&lt;stdbool.h&gt;</code>. Qualsiasi valore diverso da zero viene interpretato come vero (true), mentre il valore zero rappresenta il falso (false).</p>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -459,21 +459,21 @@ Importante
 </section>
 <section id="operatori-relazionali-e-logici" class="level3" data-number="5.1.2">
 <h3 data-number="5.1.2" class="anchored" data-anchor-id="operatori-relazionali-e-logici"><span class="header-section-number">5.1.2</span> Operatori relazionali e logici</h3>
-<p>Operatori relazionali e logici possono essere utilizzati per costruire espressioni più complesse. Gli operatori relazionali consentono di effettuare confronti binari tra variabili o espressioni.</p>
+<p>Operatori relazionali e logici possono essere utilizzati per costruire espressioni più complesse. Gli operatori relazionali consentono di effettuare confronti tra variabili o espressioni.</p>
 <ul>
-<li><p><code>==</code> Uguaglianza: verifica se i due operandi hanno lo stesso valore.</p></li>
-<li><p><code>!=</code> Diversità: verifica se i due operandi hanno valori differenti.</p></li>
-<li><p><code>&lt;</code> Minore di: verifica se l’operando a sinistra è strettamente minore di quello a destra.</p></li>
-<li><p><code>&gt;</code> Maggiore di: verifica se l’operando a sinistra è strettamente maggiore di quello a destra.</p></li>
-<li><p><code>&lt;=</code> Minore o uguale a: verifica se l’operando a sinistra è minore o uguale a quello a destra.</p></li>
-<li><p><code>&gt;=</code> Maggiore o uguale a: verifica se l’operando a sinistra è maggiore o uguale a quello a destra.</p></li>
+<li><code>==</code> Uguaglianza: verifica se i due operandi hanno lo stesso valore.</li>
+<li><code>!=</code> Diversità: verifica se i due operandi hanno valori differenti.</li>
+<li><code>&lt;</code> Minore di: verifica se l’operando a sinistra è strettamente minore di quello a destra.</li>
+<li><code>&gt;</code> Maggiore di: verifica se l’operando a sinistra è strettamente maggiore di quello a destra.</li>
+<li><code>&lt;=</code> Minore o uguale a: verifica se l’operando a sinistra è minore o uguale a quello a destra.</li>
+<li><code>&gt;=</code> Maggiore o uguale a: verifica se l’operando a sinistra è maggiore o uguale a quello a destra.</li>
 </ul>
 <p>La valutazione di un confronto genera un’espressione logica, ovvero un costrutto sintattico il cui esito definisce un valore di verità: VERO o FALSO. In C tale esito è concretamente il valore intero 1 se la condizione è verificata, 0 in caso contrario. L’espressione <code>5 &gt; 3</code>, ad esempio, vale 1.</p>
 <p>Per strutturare predicati condizionali complessi è necessario concatenare più espressioni. Questa operazione si realizza mediante gli operatori logici (o operatori booleani):</p>
 <ul>
-<li><p><code>!</code> NOT (Inversione logica): operatore unario che inverte il valore di verità dell’operando associato.</p></li>
-<li><p><code>&amp;&amp;</code> AND (Congiunzione logica): operatore binario che restituisce VERO esclusivamente se entrambi gli operandi sono veri.</p></li>
-<li><p><code>||</code> OR (Disgiunzione logica): operatore binario che restituisce VERO se almeno uno dei due operandi è vero.</p></li>
+<li><code>!</code> NOT (inversione logica): operatore unario che inverte il valore di verità dell’operando associato.</li>
+<li><code>&amp;&amp;</code> AND (congiunzione logica): operatore binario che restituisce VERO esclusivamente se entrambi gli operandi sono veri.</li>
+<li><code>||</code> OR (disgiunzione logica): operatore binario che restituisce VERO se almeno uno dei due operandi è vero.</li>
 </ul>
 <p>Gli operatori <code>&amp;&amp;</code> e <code>||</code> godono di una proprietà importante, nota come valutazione a corto circuito. Il secondo operando viene valutato solo se strettamente necessario. Se il primo operando di un <code>&amp;&amp;</code> è falso, il risultato complessivo è certamente falso e il secondo operando viene del tutto ignorato. In modo speculare, se il primo operando di un <code>||</code> è vero, il risultato è certamente vero. Questo comportamento può essere sfruttato per scrivere condizioni sicure.</p>
 <p>Vediamo due esercizi.</p>
