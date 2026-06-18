@@ -439,7 +439,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Tutto ciò di cui hai bisogno per iniziare è configurare il tuo ambiente di sviluppo (quello che in gergo chiamiamo IDE). Esistono diverse soluzioni per farlo, e la scelta finale dipenderà in parte dal tuo Sistema Operativo (Windows, macOS o Linux), quindi scegli pure quella che preferisci o con cui ti trovi più a tuo agio.</p>
 <p>Ecco le due strade principali che ti consiglio:</p>
 <ul>
-<li><p><strong>CLion</strong> (scelta consigliata): come studente di UniCa, puoi richiedere una licenza annuale gratuita (rinnovabile) per tutti i prodotti JetBrains, incluso CLion, uno dei migliori ambienti di sviluppo per il C. Ti basta registrarti con la tua mail istituzionale ed è praticamente pronto all’uso, senza configurazioni complesse. Link per la licenza studenti: https://www.jetbrains.com/shop/eform/v2/students</p></li>
+<li><p><strong>CLion</strong> (scelta consigliata): come studente di UniCa, puoi richiedere una licenza annuale gratuita (rinnovabile) per tutti i prodotti JetBrains, incluso CLion, uno dei migliori ambienti di sviluppo per il C. Ti basta registrarti con la tua mail istituzionale ed è praticamente pronto all’uso, senza configurazioni complesse. <a href="https://www.jetbrains.com/shop/eform/v2/students">Link</a> per la licenza studenti.</p></li>
 <li><p><strong>Visual Studio Code</strong> (scelta leggera e personalizzabile): la migliore alternativa “leggera” è VS Code. È gratuito, open-source e consuma pochissime risorse. Tieni conto, però, che richiede un minimo di configurazione iniziale in quanto dovrai installare l’estensione per il C/C++ e assicurarti di avere un compilatore (come GCC o Clang) installato sul tuo computer.</p></li>
 </ul>
 <p>Il mio consiglio è di non perdere giorni a cercare l’ambiente di sviluppo “perfetto”. Scegli quello che riesci a installare più facilmente sul tuo computer e inizia a scrivere codice.</p>
@@ -449,24 +449,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 data-number="2.2" class="anchored" data-anchor-id="editor-di-testo-e-terminale"><span class="header-section-number">2.2</span> Editor di testo e terminale</h2>
 <p>In questo ultimo caso ecco come procedere:</p>
 <ul>
-<li><p>Apri il tuo editor, scrivi il programma e salvalo con l’estensione .c (ad esempio, main.c).</p></li>
-<li><p>Apri il terminale e spostati nella cartella in cui hai salvato il file usando il comando cd.</p></li>
-<li><p>Digiti il comando per trasformare il testo in un file binario eseguibile.</p></li>
-<li><p>Lanci il programma appena generato.</p></li>
+<li>Apri il tuo editor, scrivi il programma e salvalo con l’estensione .c (ad esempio, main.c).</li>
+<li>Apri il terminale e spostati nella cartella in cui hai salvato il file usando il comando cd.</li>
+<li>Digiti il comando per trasformare il testo in un file binario eseguibile.</li>
+<li>Lanci il programma appena generato.</li>
 </ul>
 <p><strong>Su macOS</strong>: i Mac utilizzano il compilatore clang (che si attiva anche digitando il comando storico gcc). Se il terminale dovesse dirti che il comando non esiste, ti basterà installare il tool a riga di comando digitando <code>xcode-select --install</code>.</p>
 <p>Una volta installato, i comandi nel Terminale sono:</p>
 <ul>
-<li><p><code>gcc -Wall main.c -o il_mio_programma</code> per compilare</p></li>
-<li><p><code>./il_mio_programma</code> per eseguire</p></li>
+<li><code>gcc -Wall main.c -o il_mio_programma</code> per compilare</li>
+<li><code>./il_mio_programma</code> per eseguire</li>
 </ul>
 <p><strong>Su Windows</strong>: puoi usare il prompt dei comandi (CMD). Di base Windows non include un compilatore C. Il modo più pulito per ottenerlo è installare una distribuzione di GCC per Windows (come MinGW-w64, installabile facilmente tramite MSYS2) e assicurarsi di inserire il percorso del compilatore nelle variabili d’ambiente del sistema.</p>
 <p>Una volta configurato GCC, i comandi sono del tutto analoghi:</p>
 <ul>
-<li><p><code>gcc -Wall main.c -o il_mio_programma</code> per compilare</p></li>
-<li><p><code>il_mio_programma.exe</code> per eseguire</p></li>
+<li><code>gcc -Wall main.c -o il_mio_programma</code> per compilare</li>
+<li><code>il_mio_programma.exe</code> per eseguire</li>
 </ul>
-<p>In Windows, il prefisso <code>.\</code> è obbligatorio se utilizzi PowerShell.</p>
+<p>In Windows, per eseguire il programma, il prefisso <code>.\</code> è obbligatorio se utilizzi la PowerShell.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -477,7 +477,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Negli esempi di compilazione è presente <code>-Wall</code> (Warning All). Questo comando dice al compilatore di segnalare qualsiasi riga di codice che, pur non bloccando la creazione del programma, risulta ambigua o potenzialmente problematica.</p>
+<p>Negli esempi di compilazione è presente <code>-Wall</code> (Warning All). Questo comando dice al compilatore di segnalare qualsiasi riga di codice che, pur non bloccando la creazione del programma, risulta potenzialmente problematica.</p>
 </div>
 </div>
 </section>
@@ -485,18 +485,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 data-number="2.3" class="anchored" data-anchor-id="linguaggi-di-programmazione"><span class="header-section-number">2.3</span> Linguaggi di programmazione</h2>
 <p>Per capire dove si colloca il C, dobbiamo fare un piccolo passo indietro. La storia dell’informatica è legata ad una progressiva astrazione. Esistono tre categorie di linguaggi:</p>
 <ul>
-<li><p>Linguaggio Macchina: linguaggio che il computer comprende nativamente, è composto esclusivamente da sequenze di bit (0 e 1), tanto elementare per l’hardware quanto impossibile da gestire per un essere umano.</p></li>
-<li><p>Linguaggio Assembly: rappresenta il primo livello di astrazione e sostituisce gli 0 e 1 con parole chiave (come ADD o MOV), rendendo il codice leggibile dall’uomo, pur rimanendo legato all’architettura della macchina.</p></li>
-<li><p>Linguaggi di Alto Livello: linguaggi vicini alla logica umana e indipendenti dall’hardware. A seconda di come vengono tradotti per la macchina, si dividono in compilati (il codice viene tradotto tutto insieme prima dell’esecuzione) o interpretati (tradotti riga per riga mentre il programma è in esecuzione).</p></li>
+<li>Linguaggio Macchina: linguaggio che il computer comprende nativamente, è composto esclusivamente da sequenze di bit (0 e 1), tanto elementare per l’hardware quanto impossibile da gestire per un essere umano.</li>
+<li>Linguaggio Assembly: rappresenta il primo livello di astrazione e sostituisce gli 0 e 1 con parole chiave (come ADD o MOV), rendendo il codice leggibile dall’uomo, pur rimanendo legato all’architettura della macchina.</li>
+<li>Linguaggi di Alto Livello: linguaggi vicini alla logica umana e indipendenti dall’hardware. A seconda di come vengono tradotti per la macchina, si dividono in <em>compilati</em> (il codice viene tradotto tutto insieme prima dell’esecuzione) o <em>interpretati</em> (tradotti riga per riga mentre il programma è in esecuzione).</li>
 </ul>
 <p>Il C è un linguaggio di alto livello di tipo compilato. Quando scriviamo un programma in C, il nostro testo non può essere eseguito direttamente ma deve attraversare un flusso di lavoro diviso in 6 fasi fondamentali:</p>
 <ul>
-<li><p>Editing: il programmatore scrive il codice sorgente (es. main.c) utilizzando un editor di testo.</p></li>
-<li><p>Preprocessing: il preprocessore analizza il codice sorgente ed esegue tutte le direttive che iniziano con il simbolo <code>#</code> (come <code>#include</code> e <code>#define</code>), include i file richiesti, effettua le sostituzioni e produce il codice sorgente che verrà effettivamente compilato.</p></li>
-<li><p>Compilazione: un software chiamato compilatore traduce il codice sorgente in linguaggio macchina, generando il cosiddetto codice oggetto (un file intermedio, non ancora pronto per l’uso).</p></li>
-<li><p>Linking: il linker unisce il codice oggetto appena creato con le funzioni delle librerie di sistema. Il risultato di questa unione è il file eseguibile finale (il .exe su Windows).</p></li>
-<li><p>Loading: quando lanci il programma, il sistema operativo copia il file eseguibile dal disco fisso alla memoria centrale (RAM) del computer.</p></li>
-<li><p>Esecuzione: la CPU legge le istruzioni presenti nella memoria centrale e le esegue una dopo l’altra.</p></li>
+<li>Editing: il programmatore scrive il codice sorgente (es. main.c) utilizzando un editor di testo.</li>
+<li>Preprocessing: il preprocessore analizza il codice sorgente ed esegue tutte le direttive che iniziano con il simbolo <code>#</code> (come <code>#include</code> e <code>#define</code>), include i file richiesti, effettua le sostituzioni e produce il codice sorgente che verrà effettivamente compilato.</li>
+<li>Compilazione: un software chiamato compilatore traduce il codice sorgente in linguaggio macchina, generando il cosiddetto codice oggetto (un file intermedio, non ancora pronto per l’uso).</li>
+<li>Linking: il linker unisce il codice oggetto appena creato con le funzioni delle librerie di sistema. Il risultato di questa unione è il file eseguibile finale (il .exe su Windows).</li>
+<li>Loading: quando lanci il programma, il sistema operativo copia il file eseguibile dal disco fisso alla memoria centrale (RAM) del computer.</li>
+<li>Esecuzione: la CPU legge le istruzioni presenti nella memoria centrale e le esegue una dopo l’altra.</li>
 </ul>
 <p>Le ultime due (Loading ed Esecuzione) sono fasi runtime gestite dal Sistema Operativo.</p>
 </section>
@@ -511,7 +511,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  printf<span class="op">(</span><span class="st">"Hello world</span><span class="sc">\n</span><span class="st">"</span><span class="op">);</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="dv">0</span><span class="op">;</span></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="Copia negli appunti" class="code-copy-button"><i class="bi"></i></button></div>
-<p>A questo punto, non ti resta che compilare ed eseguire il programma. Se tutto è configurato nel modo corretto, il codice girerà senza problemi e non dovresti ricevere alcun tipo di errore o di avviso (warning). Cosa significa questo all’atto pratico? Significa che vedrai comparire la scritta “Hello world” nel terminale (o nella console integrata del tuo IDE).</p>
+<p>A questo punto, non ti resta che compilare ed eseguire il programma. Se tutto è configurato nel modo corretto, il codice girerà senza problemi e non dovresti ricevere alcun tipo di errore o di avviso (<em>warning</em>). Cosa significa questo all’atto pratico? Significa che vedrai comparire la scritta “Hello world” nel terminale (o nella console integrata del tuo IDE).</p>
 <p>Questo è il più semplice programma in C che puoi realizzare.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -534,8 +534,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li><p>I commenti (<code>//</code> Il mio primo programma in C). Se nel tuo codice inserisci una riga che inizia con due barre oblique (<code>//</code>), stai scrivendo un commento. Questa riga viene completamente ignorata dal compilatore. Tuttavia, usare i commenti all’interno dei tuoi script è fondamentale. Ti consiglio di inserirne il più possibile. Saranno di vitale importanza quando riaprirai il file a distanza di settimane o mesi per capire cosa avevi in mente. Oltre ai commenti su singola riga esiste una seconda forma, utile quando il testo si estende su più righe (tutto ciò che è racchiuso tra <code>/*</code> e <code>*/</code> viene ignorato dal compilatore).</p></li>
 <li><p>La direttiva <code>#include &lt;stdio.h&gt;</code>. Questa riga serve a includere informazioni contenute nella libreria stdio.h (Standard Input and Output), libreria che mette a disposizione, tra le altre cose, la funzione <code>printf</code> che abbiamo usato per stampare il testo a video. Più avanti scopriremo altre librerie utilissime per i nostri progetti. Per precisione, questa riga non include una “libreria” vera e propria, ma un header file (da cui l’estensione .h), un file di testo che contiene le dichiarazioni delle funzioni messe a disposizione dalla libreria. Il codice vero e proprio della funzione, invece, verrà unito al tuo programma in un secondo momento, durante la fase di linking che abbiamo descritto poco fa.</p></li>
-<li><p>La funzione principale: <code>int main(void)</code>. Ogni singolo programma scritto in C deve avere una funzione principale. Questa funzione si chiama main. L’esecuzione del tuo programma partirà da lì. Studieremo le funzioni nel dettaglio più avanti, per ora ti basta sapere che il main racchiude le istruzioni che il computer dovrà eseguire. La parola <code>int</code> prima del nome indica che questa funzione, alla fine del suo lavoro, deve restituire un numero intero. Il main ha quindi un nome, un valore di ritorno, eventualmente un elenco di argomenti in ingresso tra le parentesi tonde e un corpo, ovvero lo spazio in cui risiede il codice vero e proprio, delimitato dalle parentesi graffe <code>{ }</code>. La parola <code>void</code> indica che la funzione main non accetta in questo caso alcun parametro (o argomento) in ingresso.</p></li>
-<li><p>La chiusura: <code>return 0;</code>. L’ultima istruzione del corpo del main è <code>return 0;</code>. Questo è il valore intero che la funzione restituisce per comunicare che tutto è andato a buon fine. Se ometti questa riga il programma funzionerà comunque, ma scoprirai presto che non si tratta di un aspetto estetico. Per la <strong>sola funzione main</strong>, lo standard del linguaggio (dal C99 in poi) stabilisce che, se ometti il return, il programma restituisce comunque 0 in automatico.</p></li>
+<li><p>La funzione principale: <code>int main(void)</code>. Ogni singolo programma scritto in C deve avere una funzione principale. Questa funzione si chiama <code>main</code>. L’esecuzione del tuo programma partirà da lì. Studieremo le funzioni nel dettaglio più avanti, per ora ti basta sapere che il <code>main</code> racchiude le istruzioni che il computer dovrà eseguire. La parola <code>int</code> prima del nome indica che questa funzione, alla fine del suo lavoro, deve restituire un numero intero. Il <code>main</code> (come ogni altra funzione) ha quindi un nome, un valore di ritorno, eventualmente un elenco di argomenti in ingresso tra le parentesi tonde e un corpo, ovvero lo spazio in cui risiede il codice vero e proprio, delimitato dalle parentesi graffe <code>{ }</code>. La parola <code>void</code> indica che la funzione <code>main</code> non accetta in questo caso alcun parametro (o argomento) in ingresso.</p></li>
+<li><p>La chiusura: <code>return 0;</code>. L’ultima istruzione del corpo del <code>main</code> è <code>return 0;</code>. Questo è il valore intero che la funzione restituisce per comunicare che tutto è andato a buon fine. Se ometti questa riga il programma funzionerà comunque, ma scoprirai presto che non si tratta di un aspetto estetico. Per la <strong>sola funzione</strong> <code>main</code>, lo standard del linguaggio (dal C99 in poi) stabilisce che, se ometti il <code>return</code>, il programma restituisce comunque 0 in automatico.</p></li>
 </ul>
 <p>Una piccola nota: il simbolo <code>\n</code> in coda rappresenta un ritorno a capo e serve a far ripartire il prompt del terminale su una riga nuova. Ne riparleremo a breve.</p>
 <div class="callout callout-style-default callout-note callout-titled">
