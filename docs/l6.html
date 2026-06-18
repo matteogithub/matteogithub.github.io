@@ -410,7 +410,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#strutture-dati-complesse-array-di-strutture" id="toc-strutture-dati-complesse-array-di-strutture" class="nav-link" data-scroll-target="#strutture-dati-complesse-array-di-strutture"><span class="header-section-number">8.2</span> Strutture dati complesse: array di strutture</a></li>
   <li><a href="#struct-o-typedef" id="toc-struct-o-typedef" class="nav-link" data-scroll-target="#struct-o-typedef"><span class="header-section-number">8.3</span> <code>struct</code> o <code>typedef</code></a>
   <ul class="collapse">
-  <li><a href="#lapproccio-standard-esplicito" id="toc-lapproccio-standard-esplicito" class="nav-link" data-scroll-target="#lapproccio-standard-esplicito"><span class="header-section-number">8.3.1</span> 1. L’approccio standard (Esplicito)</a></li>
+  <li><a href="#lapproccio-standard-esplicito" id="toc-lapproccio-standard-esplicito" class="nav-link" data-scroll-target="#lapproccio-standard-esplicito"><span class="header-section-number">8.3.1</span> 1. L’approccio standard (esplicito)</a></li>
   <li><a href="#lapproccio-con-typedef-alias" id="toc-lapproccio-con-typedef-alias" class="nav-link" data-scroll-target="#lapproccio-con-typedef-alias"><span class="header-section-number">8.3.2</span> 2. L’approccio con <code>typedef</code> (alias)</a></li>
   <li><a href="#perché-preferire-struct" id="toc-perché-preferire-struct" class="nav-link" data-scroll-target="#perché-preferire-struct"><span class="header-section-number">8.3.3</span> Perché preferire <code>struct</code>?</a></li>
   </ul></li>
@@ -478,7 +478,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>L’uso della <code>scanf</code> per la lettura di stringhe da tastiera è fortemente sconsigliato per due ragioni fondamentali:</p>
 <ol type="1">
 <li>Non consente di verificare esplicitamente i limiti fisici dell’array di destinazione, esponendo il sistema a gravi vulnerabilità di <strong>buffer overflow</strong> qualora l’utente inserisca una stringa più lunga della capacità allocata.</li>
-<li>L’acquisizione del flusso viene bruscamente interrotta non appena viene rilevato un carattere di spaziatura (spazio vuoto, tabulazione o ritorno a capo), rendendo impossibile l’acquisizione di stringhe composte da più parole.</li>
+<li>L’acquisizione del flusso viene interrotta non appena viene rilevato un carattere di spaziatura (spazio vuoto, tabulazione o ritorno a capo), rendendo impossibile l’acquisizione di stringhe composte da più parole.</li>
 </ol>
 <p>Una soluzione consiste nell’impiego della funzione di libreria <code>fgets</code>. Si analizzi la versione aggiornata del codice:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span></span>
@@ -562,7 +562,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 data-number="8.3" class="anchored" data-anchor-id="struct-o-typedef"><span class="header-section-number">8.3</span> <code>struct</code> o <code>typedef</code></h2>
 <p>Nel linguaggio C, la definizione e la successiva dichiarazione di una struttura possono essere affrontate con due paradigmi differenti: l’uso esplicito della parola chiave <code>struct</code> o l’impiego del costrutto <code>typedef</code>.</p>
 <section id="lapproccio-standard-esplicito" class="level3" data-number="8.3.1">
-<h3 data-number="8.3.1" class="anchored" data-anchor-id="lapproccio-standard-esplicito"><span class="header-section-number">8.3.1</span> 1. L’approccio standard (Esplicito)</h3>
+<h3 data-number="8.3.1" class="anchored" data-anchor-id="lapproccio-standard-esplicito"><span class="header-section-number">8.3.1</span> 1. L’approccio standard (esplicito)</h3>
 <p>Nel primo caso, si definisce il modello della struttura e si dichiara la variabile ripetendo la parola chiave <code>struct</code> ad ogni istanza:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Definizione</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="kw">struct</span> studente <span class="op">{</span></span>

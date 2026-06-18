@@ -470,11 +470,11 @@ window.Quarto = {
 <blockquote class="blockquote">
 <p><strong>Definizione:</strong> Un puntatore è una variabile destinata a memorizzare l’indirizzo di memoria (la coordinata fisica nella RAM) di un’altra variabile.</p>
 </blockquote>
-<p>Come verrà analizzato dettagliatamente, i puntatori sono indispensabili per manipolare gli array, modificare il contenuto delle variabili passate come argomento alle funzioni, gestire i file, governare l’allocazione dinamica della memoria e strutturare collezioni di dati complesse come le liste concatenate.</p>
+<p>Come verrà analizzato dettagliatamente, i puntatori sono indispensabili per manipolare gli array, modificare il contenuto delle variabili passate alle funzioni, gestire i file, governare l’allocazione dinamica della memoria e strutturare collezioni di dati complesse come le liste concatenate.</p>
 <p>La sintassi per la dichiarazione di un puntatore richiede l’uso dell’operatore <code>*</code> anteposto al nome della variabile:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> <span class="op">*</span>mio_puntatore<span class="op">;</span></span></code></pre></div><button title="Copia negli appunti" class="code-copy-button"><i class="bi"></i></button></div>
 <p>La dichiarazione definisce l’identificatore del puntatore e, mediante il tipo specificato (in questo caso <code>int</code>), stabilisce il tipo di dato della variabile puntata. È possibile dichiarare puntatori a qualunque tipo di dato.</p>
-<p>Si analizzi un primo esempio essenziale per comprendere la meccanica operativa dei puntatori:</p>
+<p>Si analizzi un primo esempio essenziale per comprendere il funzionamento di base dei puntatori:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> main<span class="op">(</span><span class="dt">void</span><span class="op">)</span> <span class="op">{</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> n <span class="op">=</span> <span class="dv">10</span><span class="op">;</span></span>
