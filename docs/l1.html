@@ -444,26 +444,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Ora sei pronto a fare un passo avanti e utilizzare le variabili. Per capire cosa siano, immaginale semplicemente come dei contenitori destinati a ospitare i dati che il tuo programma dovrà usare. Puoi fare riferimento a questo contenitore (un piccolo blocco della memoria RAM) usando un nome scelto da te. Sei libero di chiamare una variabile quasi come preferisci (ci sono solo pochissime regole sintattiche da rispettare), ma il consiglio è di scegliere sempre nomi significativi, che facciano capire immediatamente cosa c’è dentro.</p>
 <p>In C prima di poter usare una variabile, devi obbligatoriamente dichiararla. La dichiarazione è un passaggio cruciale perché associa alla tua variabile un tipo. Quando assegni un tipo a una variabile, stai definendo due cose fondamentali:</p>
 <ul>
-<li><p>La dimensione del contenitore (quanti byte di memoria deve riservare a quella variabile).</p></li>
-<li><p>Le operazioni consentite (cosa puoi fare con quel dato).</p></li>
+<li>La dimensione del contenitore (quanti byte di memoria deve riservare a quella variabile).</li>
+<li>Le operazioni consentite (cosa puoi fare con quel dato).</li>
 </ul>
 <p>Ricorda che la dimensione esatta in byte associata ad un tipo di dato non è fissa a priori, ma può dipendere dall’architettura hardware della macchina su cui viene eseguito il programma (ad esempio, se la CPU è a 32 o a 64 bit). Ecco un esempio di come si presenta una dichiarazione di variabile in C:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>  <span class="dt">int</span> number<span class="op">;</span> <span class="co">// variabile di tipo intero il cui nome è number</span></span></code></pre></div><button title="Copia negli appunti" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Con questa istruzione stai dichiarando una variabile chiamata <code>number</code> come un numero intero (int). In sostanza viene riservato un piccolo blocco di memoria RAM per questa variabile e, da questo momento in poi, potrai accedere al contenuto di quel blocco di RAM semplicemente usando il nome della variabile.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>  <span class="dt">int</span> number<span class="op">;</span> <span class="co">// variabile di tipo intero di nome è number</span></span></code></pre></div><button title="Copia negli appunti" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Con questa istruzione stai dichiarando una variabile chiamata <code>number</code> come un numero intero (<code>int</code>). In sostanza viene riservato un piccolo blocco di memoria RAM per questa variabile (quasi certamente 4 byte) e, da questo momento in poi potrai accedere al contenuto di quel blocco di RAM semplicemente usando il nome della variabile.</p>
 <p>Il linguaggio C è <em>case sensitive</em>, significa che è sensibile alla differenza tra lettere maiuscole e lettere minuscole. I programmatori usano delle convenzioni standard per dare i nomi alle variabili. In C la più diffusa è lo <em>snake_case</em>, in cui le parole sono scritte in minuscolo e separate dal carattere underscore. In altri linguaggi è molto comune anche il <em>camelCase</em> (chiamato così perché le maiuscole in mezzo alla parola ricordano le gobbe di un cammello).</p>
 <section id="variabili-e-dimensione" class="level3" data-number="3.1.1">
 <h3 data-number="3.1.1" class="anchored" data-anchor-id="variabili-e-dimensione"><span class="header-section-number">3.1.1</span> Variabili e dimensione</h3>
 <p>Quanto è grande questo blocco di memoria? Nella maggior parte delle architetture moderne la risposta è 4 byte, ma puoi verificarlo tu stesso direttamente sul tuo computer con un piccolo test:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> main<span class="op">(</span><span class="dt">void</span><span class="op">)</span> </span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">int</span> number<span class="op">;</span> <span class="co">// variabile di tipo intero il cui nome è number</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  printf<span class="op">(</span><span class="st">"</span><span class="sc">\n</span><span class="st">Un intero occupa </span><span class="sc">%zu</span><span class="st"> byte"</span><span class="op">,</span> <span class="kw">sizeof</span><span class="op">(</span>number<span class="op">));</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="co">// In alternativa:</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="co">// printf("\nUn intero occupa %zu byte", sizeof(int));</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="dv">0</span><span class="op">;</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="Copia negli appunti" class="code-copy-button"><i class="bi"></i></button></div>
-<p>In questo blocco di codice, sizeof ha il compito di determinare la dimensione fisica in byte occupata in memoria RAM dalla variabile <code>number</code> o, nell’alternativa commentata, direttamente dal tipo di dato <code>int</code>. Come puoi vedere, la funzione <code>printf</code> può essere usata anche per stampare il risultato di un’espressione. Per farlo, devi semplicemente indicare al C dove vuoi che il valore appaia all’interno della stringa di testo. Questo si fa inserendo uno specificatore di formato (<code>%zu</code> fa riferimento al tipo <code>size_t</code> intero senza segno definito dallo standard C per rappresentare la dimensione in byte di qualsiasi oggetto in memoria), dopodiché, ti basta indicare l’espressione o la variabile subito dopo la virgola.</p>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> main<span class="op">(</span><span class="dt">void</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">int</span> number<span class="op">;</span> <span class="co">// variabile di tipo intero</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  printf<span class="op">(</span><span class="st">"</span><span class="sc">\n</span><span class="st">Un intero occupa </span><span class="sc">%zu</span><span class="st"> byte"</span><span class="op">,</span> <span class="kw">sizeof</span><span class="op">(</span>number<span class="op">));</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="co">// In alternativa:</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="co">// printf("\nUn intero occupa %zu byte", sizeof(int));</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="Copia negli appunti" class="code-copy-button"><i class="bi"></i></button></div>
+<p>In questo blocco di codice, <code>sizeof</code> ha il compito di determinare la dimensione fisica in byte occupata in memoria RAM dalla variabile <code>number</code> o, nell’alternativa commentata, direttamente dal tipo di dato <code>int</code>. Come puoi vedere, la funzione <code>printf</code> può essere usata anche per stampare il risultato di un’espressione. Per farlo, devi semplicemente indicare al C dove vuoi che il valore appaia all’interno della stringa di testo. Questo si fa inserendo uno specificatore di formato (<code>%zu</code> fa riferimento al tipo <code>size_t</code> intero senza segno definito dallo standard C per rappresentare la dimensione in byte di qualsiasi oggetto in memoria), dopodiché, ti basta indicare l’espressione o la variabile subito dopo la virgola.</p>
 </section>
 <section id="variabili-e-contenuto" class="level3" data-number="3.1.2">
 <h3 data-number="3.1.2" class="anchored" data-anchor-id="variabili-e-contenuto"><span class="header-section-number">3.1.2</span> Variabili e contenuto</h3>
@@ -475,7 +474,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="co">// %d è il segnaposto del valore contenuto nella variabile number</span></span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">0</span><span class="op">;</span></span>
 <span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="Copia negli appunti" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Se provi a compilare ed eseguire questo codice, potresti rimanere sorpreso. Il compilatore non si bloccherà e sul terminale potrebbe apparire un numero apparentemente senza senso (si genera quello che formalmente si chiama comportamento indefinito). Per capire cosa è successo, dobbiamo guardare di nuovo sotto il cofano. Quando hai scritto <code>int number;</code> è stata cercata nella RAM una porzione libera (da 4 byte) ed è stata usata per la variabile number. Quel numero che vedi a schermo non è altro che l’interpretazione come numero intero della sequenza di bit che già si trovavano in quella porzione di RAM. I valori “spazzatura” sono residui lasciati in quella zona di memoria dal tuo stesso programma.</p>
+<p>Se provi a compilare ed eseguire questo codice, potresti rimanere sorpreso. Il compilatore non si bloccherà e sul terminale potrebbe apparire un numero apparentemente senza senso (si genera quello che formalmente si chiama comportamento indefinito). Per capire cosa è successo, dobbiamo guardare di nuovo sotto il cofano. Quando hai scritto <code>int number;</code> è stata cercata nella RAM una porzione libera (da 4 byte) ed è stata usata per la variabile <code>number</code>. Quel numero che vedi a schermo non è altro che l’interpretazione come numero intero della sequenza di bit che già si trovavano in quella porzione di RAM. Questi valori “spazzatura” sono residui lasciati in quella zona di memoria dal tuo stesso programma.</p>
 <p>Posso ovviamente accedere a quel blocco di RAM e modificarne il contenuto:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> main<span class="op">(</span><span class="dt">void</span><span class="op">)</span> <span class="op">{</span></span>
@@ -496,8 +495,8 @@ Importante
 <div class="callout-body-container callout-body">
 <p>È di fondamentale importanza non confondere il simbolo <code>=</code> con il simbolo <code>==</code>.</p>
 <ul>
-<li><p><code>=</code> (assegnamento): viene usato per inserire (e sovrascrivere) un valore dentro una variabile.</p></li>
-<li><p><code>==</code> (confronto): viene usato per verificare un’uguaglianza, cioè per controllare se due variabili o espressioni hanno lo stesso valore.</p></li>
+<li><code>=</code> (assegnamento): viene usato per inserire (e sovrascrivere) un valore dentro una variabile.</li>
+<li><code>==</code> (confronto): viene usato per verificare un’uguaglianza, cioè per controllare se due variabili o espressioni hanno lo stesso valore.</li>
 </ul>
 <p>Se usi per errore il simbolo <code>=</code> dove invece volevi usare <code>==</code>, il compilatore non segnalerà alcun errore di sintassi. Il programma verrà generato ed eseguito normalmente, ma si comporterà in modo completamente diverso da ciò che ti aspetti.</p>
 </div>
@@ -524,7 +523,7 @@ Importante
 <ul>
 <li>L’operatore <code>&amp;</code> (address-of) anteposto al nome di una variabile, non legge il suo valore, ma chiede di restituire l’indirizzo di memoria.</li>
 </ul>
-<p>Lo specificatore <code>%p</code> indica alla funzione <code>printf</code> che vogliamo stampare un indirizzo di memoria, che verrà mostrato sullo schermo in formato esadecimale (una sequenza di numeri e lettere, ad esempio 0x16b87f098).</p>
+<p>Lo specificatore <code>%p</code> indica alla funzione <code>printf</code> che vogliamo stampare un indirizzo di memoria, che verrà mostrato sullo schermo in formato esadecimale (una sequenza di numeri e lettere, ad esempio <code>0x16b87f098</code>).</p>
 <p>Lo standard richiederebbe di convertire l’indirizzo al tipo generico <code>void *</code> prima di stamparlo, ovvero <code>printf("%p", (void *)&amp;x);</code>. I compilatori comuni accettano anche la forma semplificata, ma è bene conoscere quella formalmente corretta.</p>
 <p>Analizziamo cosa succede durante l’esecuzione. All’inizio dichiariamo due variabili, <code>x</code> e <code>y</code>. Il compilatore riserva due spazi distinti nella RAM. Quando scriviamo <code>x = 99;</code>, riempiamo il primo contenitore. Le prime due <code>printf</code> mostreranno 99 (il valore memorizzato) e 0x… (l’indirizzo fisico di x). L’istruzione <code>x = x + 1;</code> incrementa il valore di <code>x</code>, che diventa 100. Questa è un’operazione distruttiva e il vecchio 99 è perso per sempre. Le successive due <code>printf</code> ci mostrano che il valore è ora 100 e l’indirizzo di memoria è identico a quello di prima. Le variabili in C hanno un domicilio fisso. Nel corso del programma puoi cambiare il valore, ma il contenitore non si sposta mai dalla cella di memoria che gli è stata assegnata. L’assegnamento <code>y = x</code> crea una copia. Sappiamo che <code>x</code> in questo momento vale 100. Cosa succede nella RAM? Le ultime <code>printf</code> rivelano che la variabile <code>y</code> stampa il valore 100 e l’indirizzo di memoria di <code>y</code> è completamente diverso da quello di <code>x</code>. In sostanza, “il computer” è andato all’indirizzo di <code>x</code>, ha preso i 32 bit che componevano il numero 100, ed è andato a copiarli nell’indirizzo di <code>y</code>. Da questo momento in poi, <code>x</code> e <code>y</code> vivono vite separate. Se modifichi <code>y</code>, il valore di <code>x</code> non cambierà.</p>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -538,7 +537,7 @@ Importante
 </div>
 <div class="callout-body-container callout-body">
 <p>Il Python le cose sono molto diverse. A differenza del C, in Python una variabile è semplicemente un etichetta attaccata a un oggetto. In Python, le variabili non hanno un tipo, sono gli oggetti ad averlo. Questo cambio di filosofia spiega perché in Python non esiste la necessità di dichiarare le variabili e perché si ha la sensazione che una variabile possa cambiare tipo nello stesso programma.</p>
-<p>In Python è perfettamente legale scrivere <code>x = 1</code> e subito dopo <code>x = "ciao"</code>. A seguito della prima istruzione viene creato nella RAM un oggetto di tipo intero che contiene il valore 1 e poi l’etichetta <code>x</code> viene attaccata a quell’oggetto. A seguito della seconda istruzione viene creato un nuovo oggetto, questa volta di tipo stringa, contenente il testo “ciao” e a questo punto, viene attaccata al nuovo oggetto di tipo stringa. L’etichetta x è rimasta identica ma è cambiato l’oggetto a cui fa riferimento.</p>
+<p>In Python è perfettamente legale scrivere <code>x = 1</code> e subito dopo <code>x = "ciao"</code>. A seguito della prima istruzione viene creato nella RAM un oggetto di tipo intero che contiene il valore 1 e poi l’etichetta <code>x</code> viene attaccata a quell’oggetto. A seguito della seconda istruzione viene creato un nuovo oggetto, questa volta di tipo stringa, contenente il testo “ciao” e a questo punto, viene attaccata al nuovo oggetto di tipo stringa. L’etichetta <code>x</code> è rimasta identica ma è cambiato l’oggetto a cui fa riferimento.</p>
 </div>
 </div>
 </section>
@@ -553,11 +552,11 @@ Importante
 <h2 data-number="3.3" class="anchored" data-anchor-id="operatori-aritmetici"><span class="header-section-number">3.3</span> Operatori aritmetici</h2>
 <p>Il C mette a disposizione i classici operatori per effettuare calcoli numerici sulle variabili e sulle espressioni. Di seguito sono elencati gli operatori fondamentali:</p>
 <ul>
-<li><p><code>+</code> Addizione: calcola la somma tra due operandi.</p></li>
-<li><p><code>-</code> Sottrazione: calcola la differenza tra due operandi.</p></li>
-<li><p><code>*</code> Moltiplicazione: calcola il prodotto tra due operandi.</p></li>
-<li><p><code>/</code> Divisione: calcola il quoziente tra due operandi.</p></li>
-<li><p><code>%</code> Modulo: calcola il resto della divisione intera.</p></li>
+<li><code>+</code> Addizione: calcola la somma tra due operandi.</li>
+<li><code>-</code> Sottrazione: calcola la differenza tra due operandi.</li>
+<li><code>*</code> Moltiplicazione: calcola il prodotto tra due operandi.</li>
+<li><code>/</code> Divisione: calcola il quoziente tra due operandi.</li>
+<li><code>%</code> Modulo: calcola il resto della divisione intera.</li>
 </ul>
 <p>Il comportamento dell’operatore di divisione <code>/</code> dipende dal tipo di dato degli operandi. Se entrambi gli operandi sono interi esegue una divisione intera troncando la parte decimale. Se almeno uno degli operandi è un numero a virgola mobile esegue una divisione reale.</p>
 <p>L’operatore modulo <code>%</code> richiede invece operandi interi.</p>
@@ -566,13 +565,25 @@ Importante
 <h2 data-number="3.4" class="anchored" data-anchor-id="tipi-di-dato"><span class="header-section-number">3.4</span> Tipi di dato</h2>
 <p>Torniamo ora al legame tra dichiarazioni e tipi. In C esistono pochi tipi fondamentali (chiamati anche tipi base). Più avanti vedremo che potrai definire dei nuovi tipi personalizzati, ma per adesso i mattoncini di partenza sono quattro:</p>
 <ul>
-<li><p><code>int</code>: utilizzato per i numeri interi (es. 10, -5, 0).</p></li>
-<li><p><code>float</code>: utilizzato per i numeri reali a singola precisione (numeri con la virgola, es. 3.14).</p></li>
-<li><p><code>double</code>: utilizzato per i numeri reali a doppia precisione (più precisi e capienti dei float).</p></li>
-<li><p><code>char</code>: utilizzato per i singoli caratteri di testo (es. ‘A’, ‘b’, ‘?’).</p></li>
+<li><code>int</code>: utilizzato per i numeri interi (es. 10, -5, 0).</li>
+<li><code>float</code>: utilizzato per i numeri reali a singola precisione (numeri con la virgola, es. 3.14).</li>
+<li><code>double</code>: utilizzato per i numeri reali a doppia precisione (più precisi e capienti dei float).</li>
+<li><code>char</code>: utilizzato per i singoli caratteri di testo (es. ‘A’, ‘b’, ‘?’).</li>
 </ul>
 <p>La scelta di quale tipo assegnare a una variabile dipenderà esclusivamente dal contesto e dagli obiettivi del tuo programma. Ricorda che da questa decisione dipenderanno sempre due aspetti cruciali: le operazioni che potrai effettuare su quella variabile e la dimensione del blocco di memoria che il computer riserverà.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Importante
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>A ciascun tipo di dato è associato un preciso intervallo di valori rappresentabili. Questo limite è una conseguenza della quantità di memoria fisica che il compilatore alloca per quel tipo, la quale determina il numero massimo di configurazioni binarie distinte che l’hardware può assumere. La dimensione effettiva e l’intervallo associato dipendono dall’architettura del processore.</p>
+</div>
+</div>
 <p>Per fissare le idee, ecco dimensioni su un moderno PC a 64 bit:</p>
 <table class="caption-top table">
 <thead>
