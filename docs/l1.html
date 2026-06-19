@@ -450,6 +450,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Ricorda che la dimensione esatta in byte associata ad un tipo di dato non è fissa a priori, ma può dipendere dall’architettura hardware della macchina su cui viene eseguito il programma (ad esempio, se la CPU è a 32 o a 64 bit). Ecco un esempio di come si presenta una dichiarazione di variabile in C:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>  <span class="dt">int</span> number<span class="op">;</span> <span class="co">// variabile di tipo intero di nome è number</span></span></code></pre></div><button title="Copia negli appunti" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Con questa istruzione stai dichiarando una variabile chiamata <code>number</code> come un numero intero (<code>int</code>). In sostanza viene riservato un piccolo blocco di memoria RAM per questa variabile (quasi certamente 4 byte) e, da questo momento in poi potrai accedere al contenuto di quel blocco di RAM semplicemente usando il nome della variabile.</p>
+<p>In <a href="#fig-var_RAM_01" class="quarto-xref">Figura&nbsp;<span>3.1</span></a>, gli effetti in RAM della dichiarazione della variabile <code>number</code>.</p>
+<div id="fig-var_RAM_01" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-var_RAM_01-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/var_RAM_01.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:65.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-var_RAM_01-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;3.1: Schema dell’organizzazione in RAM della variabile <code>number</code>. Il <code>?</code> indica il fatto che il valore contenuto nei 4 byte non è noto.
+</figcaption>
+</figure>
+</div>
 <p>Il linguaggio C è <em>case sensitive</em>, significa che è sensibile alla differenza tra lettere maiuscole e lettere minuscole. I programmatori usano delle convenzioni standard per dare i nomi alle variabili. In C la più diffusa è lo <em>snake_case</em>, in cui le parole sono scritte in minuscolo e separate dal carattere underscore. In altri linguaggi è molto comune anche il <em>camelCase</em> (chiamato così perché le maiuscole in mezzo alla parola ricordano le gobbe di un cammello).</p>
 <section id="variabili-e-dimensione" class="level3" data-number="3.1.1">
 <h3 data-number="3.1.1" class="anchored" data-anchor-id="variabili-e-dimensione"><span class="header-section-number">3.1.1</span> Variabili e dimensione</h3>
