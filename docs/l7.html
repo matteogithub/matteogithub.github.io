@@ -580,7 +580,21 @@ window.Quarto = {
 <span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>    printf<span class="op">(</span><span class="st">"</span><span class="sc">\n</span><span class="st">"</span><span class="op">);</span>    </span>
 <span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">0</span><span class="op">;</span></span>
 <span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="Copia negli appunti" class="code-copy-button"><i class="bi"></i></button></div>
+<p>In <a href="#fig-array_RAM" class="quarto-xref">Figura&nbsp;<span>9.1</span></a>, vediamo l’organizzazione dell’array <code>v</code> e del puntatore <code>v_ptr</code> (successivamente all’istruzione <code>v_ptr = v;</code>) in memoria RAM.</p>
+<div id="fig-array_RAM" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-array_RAM-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<embed src="images/array_RAM.pdf" class="img-fluid quarto-figure quarto-figure-center" style="width:65.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-array_RAM-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;9.1: Schema dell’organizzazione in RAM di un array
+</figcaption>
+</figure>
+</div>
 <p>L’espressione <code>*(v_ptr + 1) = 10;</code> dimostra come modificare il contenuto del secondo elemento dell’array. La notazione <code>v_ptr + 1</code> non incrementa l’indirizzo di un singolo byte, lo spostamento (offset) viene automaticamente scalato sulla dimensione del tipo puntato. Se l’array memorizza interi, lo scostamento fisico sarà tipicamente di 4 byte, se l’array fosse composto da caratteri (<code>char</code>), lo scostamento sarebbe di 1 byte. In generale, l’espressione <code>v_ptr + i</code> corrisponde all’indirizzo base aumentato di <span class="math inline">\(i \times \texttt{sizeof(tipo)}\)</span> byte. L’operatore <code>*</code> garantisce poi l’accesso diretto al valore memorizzato a quell’indirizzo.</p>
+<p>In virtù di queste proprietà, all’interno del codice le notazioni vettoriali e le espressioni basate sui puntatori risultano del tutto equivalenti dal punto di vista computazionale:</p>
+<p><span class="math display">\[v[i] \iff *(v\_ptr + i)\]</span></p>
+<p>Infine, è possibile impiegare gli operatori di incremento e decremento (<code>v_ptr++</code>, <code>v_ptr--</code>) per spostare dinamicamente il puntatore tra gli elementi dell’array. Si raccomanda di considerare che tali operazioni modificano il valore memorizzato nella variabile puntatore stessa e quindi al termine delle elaborazioni, <code>v_ptr</code> non farà più riferimento all’elemento iniziale dell’array, a meno di non procedere a un esplicito riallineamento (<code>v_ptr = v;</code>).</p>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -595,9 +609,6 @@ window.Quarto = {
 <p>Il decadimento non si verifica soltanto in pochissimi contesti eccezionali: <code>sizeof(v)</code>, che restituisce la dimensione dell’intero array e non quella di un puntatore e <code>&amp;v</code> produce un puntatore di tipo <code>int (*)[N]</code>. Al di fuori di queste eccezioni, il nome dell’array e un puntatore al suo primo elemento si comportano in modo equivalente nelle espressioni.</p>
 </div>
 </div>
-<p>In virtù di queste proprietà, all’interno del codice le notazioni vettoriali e le espressioni basate sui puntatori risultano del tutto equivalenti dal punto di vista computazionale:</p>
-<p><span class="math display">\[v[i] \iff *(v\_ptr + i)\]</span></p>
-<p>Infine, è possibile impiegare gli operatori di incremento e decremento (<code>v_ptr++</code>, <code>v_ptr--</code>) per spostare dinamicamente il puntatore tra gli elementi dell’array. Si raccomanda di considerare che tali operazioni modificano il valore memorizzato nella variabile puntatore stessa e quindi al termine delle elaborazioni, <code>v_ptr</code> non farà più riferimento all’elemento iniziale dell’array, a meno di non procedere a un esplicito riallineamento (<code>v_ptr = v;</code>).</p>
 
 
 </section>
